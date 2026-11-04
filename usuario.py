@@ -15,18 +15,22 @@ def fn_leer_cuentas_dict():
 
 def fn_crear_cuenta_dict():
     usuarios_dict = fn_leer_cuentas_dict()
-    print(usuarios_dict)
-
     nombre_str = input("Introduzca su nombre: ").strip().capitalize()
+
     while True:
         #TODO: Komprobatu ea emaila ya existitzen duenik
         #Momentuz bakarrik ea emaila balidoa dela komprobatzen du
-        correo_str = input("Introduzca su correo: ").strip()
+        correo_str = input("Introduzca su correo: ").strip().lower()
         correo_valido_bool = fn_validacion_correo_bool(correo_str)
-        if correo_valido_bool:
-            print("El correo es valido")
+        if not correo_valido_bool:
+            print("ERROR. El correo no es valido. Porfavor intentelo de nuevo")
+            continue
+        elif fn_buscar_correo_dict(correo_str, usuarios_dict["usuarios"]) is not None:
+            print("ERROR. Este correo ya esta registrado")
+            continue
+        else:
+            print("Correo Valido")
             break
-        print("ERROR. El correo no es valido. Porfavor intentelo de nuevo")
 
     contrasenia_str = input("Introduzca su contraseña: ").strip()
     nuevo_usuario_dict = {
@@ -42,7 +46,29 @@ def fn_crear_cuenta_dict():
     return nuevo_usuario_dict
 
 #TODO: sesioa asteko funtzioa egin
+def fn_iniciar_sesion_dict():
 
+    usuarios_dict = fn_leer_cuentas_dict()
+ 
+    usuario_actual_dict = None
+    while usuario_actual_dict is None:
+        correo_str = input("Introduzca su correo: ").strip()
+        correo_valido_bool = fn_validacion_correo_bool(correo_str)
+        if not correo_valido_bool:
+            print("ERROR. El correo no es valido. Porfavor intentelo de nuevo.")
+            continue
+        usuario_actual_dict = fn_buscar_correo_dict(correo_str, usuarios_dict["usuarios"])
+        if usuario_actual_dict is None:
+            print("Ese correo no existe. Inténtelo de nuevo.")
+            continue
+
+    while True:
+        contrasenia_str = input("Introduzca su contraseña: ").strip()
+        if contrasenia_str == usuario_actual_dict["contrasenia"]:
+            break
+        print("Contraseña incorrecta. Intentelo de nuevo")
+
+    return usuario_actual_dict
 
 #Beste funtzioak datuak validatzeko#
 #?Comprobatu ea validazioa ondo dagoen edo ez
@@ -64,4 +90,8 @@ def fn_validacion_correo_bool(correo):
         return False
     return True
 
-fn_crear_cuenta_dict()
+def fn_buscar_correo_dict(correo, usuarios):
+    for usuario_dict in usuarios:
+        if correo.lower() == usuario_dict["correo"].lower():
+            return usuario_dict
+    return None
