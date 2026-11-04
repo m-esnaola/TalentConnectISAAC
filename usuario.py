@@ -24,8 +24,6 @@ def fn_crear_cuenta_dict():
         print("ERROR. El nombre no puede estar vacio.")
 
     while True:
-        #TODO: Komprobatu ea emaila ya existitzen duenik
-        #Momentuz bakarrik ea emaila balidoa dela komprobatzen du
         correo_str = input("Introduzca su correo: ").strip().lower()
         correo_valido_bool = fn_validacion_correo_bool(correo_str)
         if not correo_valido_bool:
@@ -42,7 +40,9 @@ def fn_crear_cuenta_dict():
         contrasenia_str = input("Introduzca su contraseña: ").strip()
         if contrasenia_str:
             print("Contraseña Valida")
+            break
         print("ERROR. La contraseña no puede estar vacía.")
+
 
 
     nuevo_usuario_dict = {
@@ -107,3 +107,6 @@ def fn_buscar_correo_dict(correo, usuarios):
         if correo.lower() == usuario_dict["correo"].lower():
             return usuario_dict
     return None
+
+fn_crear_cuenta_dict()
+fn_iniciar_sesion_dict()
