@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentConnect  Envía tu CV</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <form id="formulario">
+
+<div class="campo">
+    <label for="nombre">Nombre:</label>
+<input type="text" name="nombre" id="nombre">
+
+</div>
+<div class="campo">
+<label for="email">Email:</label>
+<input type="email" name="email" id="email"placeholder="algo@gmail.com">
+</div>
+<div class="campo">
+<label for="telefono">Telefono:</label>
+<input type="tel" name="tele" id="telefono">
+</div>
+<div class="campo">
+    <label for="puesto">Oferta a la que aplica</label>
+    <select  id="puesto">
+<option value="">Selecciona</option>
+<option >Desarrollo De Aplicaciones Moviles</option>
+<option >Desarrollo Web</option>
+<option >Gestion de bases de datos</option>
+    </select>
+</div>
+<div class="campo">
+          <label for="experiencia">Años de experiencia</label>
+          <input type="number" id="experiencia" min="0" max="40" value="0">
+        </div>
+ 
+        <div class="campo">
+          <span>Modalidad preferida</span>
+          <div class="opciones">
+            <label><input type="radio" name="modalidad" value="Presencial" checked> Presencial</label>
+            <label><input type="radio" name="modalidad" value="Remoto"> Remoto</label>
+            <label><input type="radio" name="modalidad" value="Híbrido"> Híbrido</label>
+          </div>
+        </div>
+         <div class="campo">
+          <span>Habilidades</span>
+          <div class="opciones">
+            <label><input type="checkbox" name="habilidades" value="HTML"> HTML</label>
+            <label><input type="checkbox" name="habilidades" value="CSS"> CSS</label>
+            <label><input type="checkbox" name="habilidades" value="JavaScript"> JavaScript</label>
+            <label><input type="checkbox" name="habilidades" value="Python"> Python</label>
+            <label><input type="checkbox" name="habilidades" value="SQL"> SQL</label>
+            <label><input type="checkbox" name="habilidades" value="Inglés"> Inglés</label>
+          </div>
+        </div>
+ 
+        <div class="campo">
+          <label for="notas">Notas</label>
+          <textarea id="notas" rows="3" placeholder="Disponibilidad, observaciones..."></textarea>
+        </div>
+ 
+        <label class="acepto">
+          <input type="checkbox" id="privacidad">
+          La persona candidata ha dado su consentimiento para el tratamiento de sus datos.
+        </label>
+          <p id="errores" class="error"></p>
+ 
+        <div class="botones">
+          <button type="submit" class="botonEnviar">Guardar CV</button>
+          <button type="reset" class="botonBorrar">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+
+
+
+
+    </main>
+    <footer></footer>
+</body>
+</html>
