@@ -12,6 +12,7 @@ def fn_leer_cuentas_dict():
         print("No se ha encontrado usuarios.json")
     return {"usuarios": [] }
 
+
 def fn_crear_cuenta_dict():
     usuarios_dict = fn_leer_cuentas_dict()
     print(usuarios_dict)
@@ -31,7 +32,7 @@ def fn_crear_cuenta_dict():
     nuevo_usuario_dict = {
         "nombre": nombre_str,
         "correo": correo_str,
-        "contraseña": contrasenia_str
+        "contrasenia": contrasenia_str
     }
 
     usuarios_dict["usuarios"].append(nuevo_usuario_dict)
