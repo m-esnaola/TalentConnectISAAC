@@ -5,7 +5,7 @@ import json
 
 def fn_leer_cuentas_dict():
     if os.path.exists("usuarios.json"):
-        with open("usuarios.json", "r") as archivo:
+        with open("usuarios.json", "r",  encoding="utf-8") as archivo:
             print("Archivos leidos correctamente")
             return json.load(archivo)
     else:
@@ -15,7 +15,13 @@ def fn_leer_cuentas_dict():
 
 def fn_crear_cuenta_dict():
     usuarios_dict = fn_leer_cuentas_dict()
-    nombre_str = input("Introduzca su nombre: ").strip().capitalize()
+
+    while True:
+        nombre_str = input("Introduzca su nombre: ").strip().capitalize()
+        if nombre_str:
+            print("Nombre valido")
+            break
+        print("ERROR. El nombre no puede estar vacio.")
 
     while True:
         #TODO: Komprobatu ea emaila ya existitzen duenik
@@ -32,7 +38,13 @@ def fn_crear_cuenta_dict():
             print("Correo Valido")
             break
 
-    contrasenia_str = input("Introduzca su contraseña: ").strip()
+    while True:
+        contrasenia_str = input("Introduzca su contraseña: ").strip()
+        if contrasenia_str:
+            print("Contraseña Valida")
+        print("ERROR. La contraseña no puede estar vacía.")
+
+
     nuevo_usuario_dict = {
         "nombre": nombre_str,
         "correo": correo_str,
