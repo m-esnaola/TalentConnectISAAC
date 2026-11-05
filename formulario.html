@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fromulario TalentConnect</title>
+    <title>Formulario TalentConnect</title>
+
 </head>
 <body>
     <h1>TalentConnect</h1>
-    <form action="", method="POST" enctype="multipart/form-data">
+    <form action="" method="POST" enctype="multipart/form-data">
 
         <fieldset>
             <legend>Datos del candidato</legend>
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre"/>
-            <br>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
             <br>
             <label for="edad">Edad:</label>
             <input type="number" id="edad" name="edad"/>
             <br>
             Email: <input type="email" name="email" id="email">
+            <br>
             <label for="nacimiento">Fecha de nacimiento:</label>
             <input type="date" id="nacimiento" name="nacimiento">
+            <br>
         </fieldset>
 
         <div class="campo">
             <label for="puesto">Oferta a la que aplica</label>
-            <select  id="puesto">
-                <option value="">Selecciona</option>
+            <select>
                 <option >Desarrollo De Aplicaciones Moviles</option>
                 <option >Desarrollo Web</option>
                 <option >Gestion de bases de datos</option>
@@ -46,7 +47,7 @@
                 <label><input type="radio" name="modalidad" value="Híbrido"> Híbrido</label>
             </div>
         </div>
-        
+    
         <div class="campo">
             <span>Habilidades</span>
             <div class="opciones">
@@ -55,7 +56,8 @@
                 <label><input type="checkbox" name="habilidades" value="JavaScript"> JavaScript</label>
                 <label><input type="checkbox" name="habilidades" value="Python"> Python</label>
                 <label><input type="checkbox" name="habilidades" value="SQL"> SQL</label>
-                <label><input type="checkbox" name="habilidades" value="Inglés"> Inglés</label>
+                <label><input type="checkbox" name="habilidades" value="Inglés"> Inglés</label> 
+                <br>
                 Añade otra habilidad:<label><input type="text" name="habilidades" placeholder="Introduce otra habilidad"></label>
           </div>
         </div>
@@ -66,13 +68,13 @@
             <label><input type="checkbox" name="idioma" value="Castellano">Castellano</label>
             <label><input type="checkbox" name="idioma" value="Euskera">Euskera</label>
             <label><input type="checkbox" name="idioma" value="Inglés">Inglés</label>
-            Añade otro idioma:<label><input type="text" name="idioma" placeholder="Introduce otro idioma"></label>
-
+            <br>
+            Añade otro idioma:<label><input type="text" name="idioma" placeholder="Introduce otro idioma">
             </div>
         </div>
             
         <label class="acepto">
-          <input type="checkbox" id="privacidad">
+          <input type="radio" id="privacidad">
           La persona candidata ha dado su consentimiento para el tratamiento de sus datos.
         </label>
           <p id="errores" class="error"></p>
@@ -83,18 +85,11 @@
         </div>
     </form>
 
+    <script>
+
+    </script>
 
 
-        
-
-        
-
-
-
-
-
-
-    </form>
 
 </body>
 </html>
