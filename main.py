@@ -39,7 +39,7 @@ while(1 == 1):
         #el usuario elige una oferta en concreto, y se mostrara una lista de los candidatos
         #que se han presentado a esa oferta en concreto
         
-        #esta opcion puede llamar a una funcion en un archivo nuevo llamado oferta.py donde
+        #esta opcion puede llamar a una funcion en un archivo nuevo llamado ofertas.py donde
         #gestionaremos todo el codigo de las funciones sobre ofertas, para mantener el codigo
         #mas seperado y legible
 

@@ -1,0 +1,56 @@
+{
+    "candidatos": [
+        {
+            "id_candidato": 1,
+            "nombre": "Ana García",
+            "email": "ana@gmail.com",
+            "telefono": "612345678",
+            "tecnologias": [
+                {
+                    "nombre": "Python",
+                    "experiencia": 3
+                },
+                {
+                    "nombre": "Java",
+                    "experiencia": 2
+                }
+            ],
+            "idiomas": [
+                {
+                    "nombre": "Inglés",
+                    "nivel": "B2"
+                },
+                {
+                    "nombre": "Euskera",
+                    "nivel": "C1"
+                }
+            ]
+        },
+        {
+            "id_candidato": 2,
+            "nombre": "Marcos López",
+            "email": "marcos@gmail.com",
+            "telefono": "623456789",
+            "tecnologias": [
+                {
+                    "nombre": "HTML",
+                    "experiencia": 2
+                },
+                {
+                    "nombre": "CSS",
+                    "experiencia": 2
+                },
+                {
+                    "nombre": "JavaScript",
+                    "experiencia": 1
+                }
+            ],
+            "idiomas": [
+                {
+                    "nombre": "Inglés",
+                    "nivel": "B1"
+                }
+            ]
+        }
+    ]
+}
