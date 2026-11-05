@@ -11,45 +11,47 @@
     <form action="" method="POST" enctype="multipart/form-data">
 
         <fieldset>
-            <legend>Datos del candidato</legend>
-            <label for="nombre">Nombre:</label>
+            <legend><b>Datos del candidato</b></legend>
+            <label for="nombre"><b>Nombre:</b></label>
             <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
             <br>
-            <label for="edad">Edad:</label>
+            <label for="edad"><b>Edad:</b></label>
             <input type="number" id="edad" name="edad"/>
             <br>
-            Email: <input type="email" name="email" id="email">
+            <b>Email:</b><input type="email" name="email" id="email">
             <br>
-            <label for="nacimiento">Fecha de nacimiento:</label>
+            <label for="nacimiento"><b>Fecha de nacimiento:</b></label>
             <input type="date" id="nacimiento" name="nacimiento">
             <br>
         </fieldset>
+        
+        <br>
 
-        <div class="campo">
-            <label for="puesto">Oferta a la que aplica</label>
-            <select>
-                <option >Desarrollo De Aplicaciones Moviles</option>
-                <option >Desarrollo Web</option>
-                <option >Gestion de bases de datos</option>
+        <fieldset>
+            <label for="puesto" id="puesto"><b>Oferta a la que aplica</b></label>
+            <select name="puesto" id="puesto">
+                <option value="DdAM">Desarrollo De Aplicaciones Moviles</option>
+                <option value="DW">Desarrollo Web</option>
+                <option value="GdBD">Gestion de bases de datos</option>
             </select>
-        </div>
+     
 
-        <div class="campo">
-          <label for="experiencia">Años de experiencia</label>
+        <div>
+          <label for="experiencia" id="experiencia"><b>Años de experiencia</b></label>
           <input type="number" id="experiencia" min="0" max="40" value="0">
         </div>
  
-        <div class="campo">
-            <span>Modalidad preferida</span>
-            <div class="opciones">
-                <label><input type="radio" name="modalidad" value="Presencial" checked> Presencial</label>
-                <label><input type="radio" name="modalidad" value="Remoto"> Remoto</label>
-                <label><input type="radio" name="modalidad" value="Híbrido"> Híbrido</label>
+
+        <div>
+            <span><b>Modalidad preferida</b></span>
+                <label><input type="radio" name="modalidad" id="presencial" value="presencial">Presencial</label>
+                <label><input type="radio" name="modalidad" id="remoto" value="remoto">Remoto</label>
+                <label><input type="radio" name="modalidad" id="híbrido" value="híbrido">Híbrido</label>
             </div>
         </div>
     
         <div class="campo">
-            <span>Habilidades</span>
+            <span><b>Habilidades</b></span>
             <div class="opciones">
                 <label><input type="checkbox" name="habilidades" value="HTML"> HTML</label>
                 <label><input type="checkbox" name="habilidades" value="CSS"> CSS</label>
@@ -58,23 +60,28 @@
                 <label><input type="checkbox" name="habilidades" value="SQL"> SQL</label>
                 <label><input type="checkbox" name="habilidades" value="Inglés"> Inglés</label> 
                 <br>
-                Añade otra habilidad:<label><input type="text" name="habilidades" placeholder="Introduce otra habilidad"></label>
+                <b>Añade otra habilidad:</b><label><input type="text" name="habilidades" placeholder="Introduce otra habilidad"></label>
           </div>
         </div>
 
         <div class="idiomas">
-            <span>Idiomas</span>
+            <span><b>Idiomas</b></span>
             <div class="opciones">
             <label><input type="checkbox" name="idioma" value="Castellano">Castellano</label>
             <label><input type="checkbox" name="idioma" value="Euskera">Euskera</label>
             <label><input type="checkbox" name="idioma" value="Inglés">Inglés</label>
             <br>
-            Añade otro idioma:<label><input type="text" name="idioma" placeholder="Introduce otro idioma">
+            <b>Añade otro idioma:</b><label><input type="text" name="idioma" placeholder="Introduce otro idioma">
             </div>
         </div>
-            
+        
+        </fieldset>
+
+        <!-- Poner que este campo sea oblogatorio con "required" -->
+        <br>
+
         <label class="acepto">
-          <input type="radio" id="privacidad"> #Poner que este campo sea oblogatorio con "required"
+          <input type="radio" id="privacidad">  
           La persona candidata ha dado su consentimiento para el tratamiento de sus datos.
         </label>
           <p id="errores" class="error"></p>
@@ -89,12 +96,12 @@
         function ValidarForm() {
             var nombre = document.getElementById("nombre").value;
             var edad = document.getElementById("edad").value;
-            var nacimiento = document.getElementById("nacimiento").value;
             var email = document.getElementById("email").value;
-            var experiencia = document.getElementById("experiencia").value;
-            
-
-        }
+            var nacimiento = document.getElementById("nacimiento").value;
+            var experiencia = document.getElementById("experiencia").value;    
+            var puesto = document.getElementById("puesto").value;
+            var 
+            }
 
     </script>
 
