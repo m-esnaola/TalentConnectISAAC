@@ -1,6 +1,8 @@
 import json
 import os
 
+
+
 # * Eskaintza guztiak JSON fitxategitik irakurtzen du
 def fn_leer_ofertas_dict():
     """ Eskaintzak JSON fitxategitik irakurri eta hiztegi batean itzuliko du
@@ -15,8 +17,10 @@ def fn_leer_ofertas_dict():
         print("No se ha encontrado el archivo con las ofertas")
         return {"ofertas": []}
 
+
+
 # * Eskuragarri dauden eskaintza guztiak pantailan erakusten ditu
-def fn_mostrar_ofertas_dict():
+def fn_mostrar_ofertas():
     """Eskuragarri dauden eskaintza guztiak eta haien eskakizunak pantailan erakutsi."""
     ofertas_dict = fn_leer_ofertas_dict()
 
@@ -49,8 +53,30 @@ def fn_mostrar_ofertas_dict():
         print("\nCandidaturas recibidas:", len(oferta_dict["candidaturas"]))
         print("-----------------------------------------\n")
 
+
+
 # TODO: Eskaintza jakin batean izena eman duten hautagaiak erakutsi
 def fn_mostrar_candidtos_de_oferta():
+    ofertas_dict = fn_leer_ofertas_dict()
+    # Eskaintzarik ez badago, funtzioa amaitu
+    if not ofertas_dict["ofertas"]:
+        print("No hay ofertas disponibles")
+        return
+    # Erabiltzaileari eskaintzaren IDa eskatu
+    while True:
+        opcion_oferta_int = input("Introduce el ID de la oferta: ")
+        if opcion_oferta_int.isdigit():
+            break
+        print("Introduce un ID numerico valido")
+    # Aukeratutako eskaintza bilatu
+    for oferta_dict in ofertas_dict["ofertas"]:
+        if opcion_oferta_int == oferta_dict["id_oferta"]:
+            print("ID:", oferta_dict["id_oferta"])
+            print("Oferta:", oferta_dict["titulo"])
+            print("\nCandidaturas recibidas:", len(oferta_dict["candidaturas"]))
+            print("\nLista de candidatos: ")
+            #TODO: Aukeratutako eskaintzan izena eman duten hautagaien laburpena erakutsi.
+            return
+        
+    print("No existe ninguna oferta con ese ID")
     return
-
-fn_mostrar_ofertas_dict()
