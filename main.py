@@ -1,3 +1,5 @@
+from ofertas import fn_mostrar_ofertas, fn_mostrar_candidtos_de_oferta
+
 #TODO: DOkumentazioa aldatu eta euskaraz jarri
 while(1 == 1):
 
@@ -35,15 +37,27 @@ while(1 == 1):
         # Las funcionalidades se implementarán en candidatos.py.
         # Cada opción del submenú llamará a una función diferente.
 
-    # * CONSULTA DE OFERTAS
+    # * ESKAINTZEN KONTSULTA
+    # TODO: Aukeratutako eskaintzako hautagaien laburpena erakutsi.
     elif (selecion_int == 2):
         print("Opción de consulta de ofertas seleccionado")
-        # TODO (Maitane): Implementar la consulta de ofertas.
-        # - Mostrar todas las ofertas disponibles.
-        # - Permitir seleccionar una oferta mediante su ID.
-        # - Mostrar los candidatos que se han postulado a esa oferta.
+        # Eskaintzen kontsultarako azpimenua.
+        while True:
+            print("0. Volver al menú principal")
+            print("1. Mostrar todas las ofertas")
+            print("2. Mostrar todos los candidatos de una oferta")
+            seleccion_oferta_str = input("Seleccione una opcion:")
 
-        # Las funciones se implementarán en ofertas.py.
+            if seleccion_oferta_str == "0":
+                break
+            elif seleccion_oferta_str == "1":
+                fn_mostrar_ofertas()
+            elif seleccion_oferta_str == "2":
+                fn_mostrar_candidtos_de_oferta()
+            else:
+                print("ERROR. Opción no valida. Porfavor, introduzca una opción valida")
+                
+            
 
     # * GESTIÓN DE PROCESOS DE SELECCIÓN
     elif (selecion_int == 3):
