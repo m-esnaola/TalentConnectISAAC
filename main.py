@@ -1,11 +1,12 @@
+#TODO: DOkumentazioa aldatu eta euskaraz jarri
 while(1 == 1):
 
     print("\nBienvenido al menú interactivo:")
     
-    # Posibles cosas a añadir: 
-        # Si es que da tiempo, o cara al futuro gestionar candidaturas (añadir nuevas)
-        #Sacar estadisticas
-        #Mi cuenta
+    # ? Posibles cosas a añadir: (si nos da tiempo)
+    # - Si es que da tiempo, o cara al futuro gestionar candidaturas (añadir nuevas)
+    # - Sacar estadisticas
+    # - Mi cuenta
 
     print("0 --> Salir del menú")
     print("1 --> Gestión de candidatos")    #mostrar todos los candidatos, buscar un 
@@ -23,32 +24,37 @@ while(1 == 1):
         print("Adiós, vuelva pronto")
         break
 
+    # * GESTIÓN DE CANDIDATOS
     elif (selecion_int == 1):
         print("Opción de gestión de candidatos seleccionado")
-        #Añadiria aqui un pequeño menu, con opciones como mostrar todos los candidatos, 
-        #buscar un candidato concreto por ID o por algo en concreto y mostrar su informacion
-        #filtar candidatos por x habilidades, idiomas o...
+        # TODO: Crear un submenú para gestionar candidatos.
+        # - Mostrar todos los candidatos registrados.
+        # - Buscar un candidato por ID y mostrar su información.
+        # - Filtrar candidatos por tecnologías, idiomas y experiencia.
         
-        #cada una de esas opciones, llamará a una función diferente en candidatos.py donde
-        #ahí escribiremos todo el codigo de la funcion
-        
+        # Las funcionalidades se implementarán en candidatos.py.
+        # Cada opción del submenú llamará a una función diferente.
 
+    # * CONSULTA DE OFERTAS
     elif (selecion_int == 2):
         print("Opción de consulta de ofertas seleccionado")
-        #Imprimiremos el nombre o lo basico de todas las ofertas que tengamos
-        #el usuario elige una oferta en concreto, y se mostrara una lista de los candidatos
-        #que se han presentado a esa oferta en concreto
-        
-        #esta opcion puede llamar a una funcion en un archivo nuevo llamado ofertas.py donde
-        #gestionaremos todo el codigo de las funciones sobre ofertas, para mantener el codigo
-        #mas seperado y legible
+        # TODO (Maitane): Implementar la consulta de ofertas.
+        # - Mostrar todas las ofertas disponibles.
+        # - Permitir seleccionar una oferta mediante su ID.
+        # - Mostrar los candidatos que se han postulado a esa oferta.
 
+        # Las funciones se implementarán en ofertas.py.
+
+    # * GESTIÓN DE PROCESOS DE SELECCIÓN
     elif (selecion_int == 3):
         print("Opción de gestión de procesos seleccionado")
-        #Esta opcion puede llamar a una funcion en procesos_seleccion, donde dando el ID 
-        #o algun dato de un candidato, podamos modificar su proceso de selección
-        #por defecto todas las nuevas candidaturas estarán en revision, y se podrán cambiar
-        #pendiente de entrevista, aceptado o rechazado
+        # TODO: Implementar la modificación del estado de candidaturas.
+        # - Identificar la oferta y el candidato.
+        # - Consultar el estado actual de la candidatura.
+        # - Permitir cambiar el estado: pendiente de revisión, pendiente de entrevista,
+        #   aceptado o rechazado.
+
+        # Las funciones se implementarán en procesos_seleccion.py.
 
     else:
         print("Opción no válida")
