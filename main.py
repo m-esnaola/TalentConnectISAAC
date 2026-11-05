@@ -6,14 +6,13 @@ while(1 == 1):
     print("\nBienvenido al menú interactivo:")
     
     # ? Posibles cosas a añadir: (si nos da tiempo)
-    # - Si es que da tiempo, o cara al futuro gestionar candidaturas (añadir nuevas)
     # - Sacar estadisticas
     # - Mi cuenta
 
     print("0 --> Salir del menú")
     print("1 --> Gestión de candidatos")    #mostrar todos los candidatos, buscar un 
                                             #candidato por id y mostrar su info, filtar 
-                                            #candidatos...
+                                            #candidatos y añadir candidatura
     print("2 --> Consultar oferta")         #Mostrar todos los candidatos que tiene una 
                                             #oferta (en concreto)
     print("3 --> Gestión de procesos de selección") #cambiar el estado de una candidatura 
@@ -33,6 +32,7 @@ while(1 == 1):
         # - Mostrar todos los candidatos registrados.
         # - Buscar un candidato por ID y mostrar su información.
         # - Filtrar candidatos por tecnologías, idiomas y experiencia.
+        # - Añadir candidatos
         
         # Las funcionalidades se implementarán en candidatos.py.
         # Cada opción del submenú llamará a una función diferente.
