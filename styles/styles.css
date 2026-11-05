@@ -1,5 +1,7 @@
 /* ESTILOS GENERALES DE TALENTCONNECT */
 
+
+
 /* MAITANE - PAGINA PRINCIPAL */
 body {
     margin: 0;
@@ -55,7 +57,93 @@ body {
     background-color: #66DCC8;
     color: #10273A;
 }
+/*FIN DE LA CABECERA*/
 
+
+
+/*PORTADA PRINCIPAL*/
+.portada {
+    background-color: #10273A;
+    color: white;
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/*texto de la portada*/
+.texto_portada {
+    flex: 1;
+}
+
+/*subtitulo de la portada*/
+.subtitulo_portada {
+    color: #35BDA6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/*titulo de la portada*/
+.titulo_portada {
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+/*descripcion*/
+.descripcion_portada {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #D2E2EB;
+}
+
+/*BOTONES DE LA PORTADA*/
+.botones_portada{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+.botones_portada a {
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.boton_ofertas {
+    background-color: #35BDA6;
+    color: #10273A;
+}
+.boton_ofertas:hover {
+    background-color: #66DCC8;
+}
+
+.boton_formulario {
+    border: 2px solid white;
+    color: white;
+}
+.boton_formulario:hover {
+    background-color: white;
+    color: #10273A;
+}
+
+/*IMAGEN DE LA PORTADA*/
+.imagen_portada {
+    flex: 1;
+    min-width: 0;
+}
+.imagen_portada img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+
+/*CSS PARA PANTALLAS PEQUEÑAS*/
 @media (max-width: 850px) {
     .cabecera {
         flex-direction: column;
@@ -66,10 +154,8 @@ body {
     }
     .menu {
         justify-content: center;
-        flex-wrap: wrap;
         gap: 15px;
         text-align: center;
     }
+    /*TODO PANTALLA PEQUEÑA LA PORTADA*/  
 }
-
-/*FIN DE LA CABECERA*/
