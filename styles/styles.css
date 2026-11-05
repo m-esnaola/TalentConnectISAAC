@@ -1,32 +1,42 @@
 /* ESTILOS GENERALES DE TALENTCONNECT */
 
-
-
 /* MAITANE - PAGINA PRINCIPAL */
+/*estilos compartidos*/
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+}
+.subtitulo {
+    color: #168B79;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.titulo {
+    color: #10273A;
+    font-size: 32px;
+    margin: 15px 0;
+}
+.descripcion {
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 /*CABECERA*/
 .cabecera {
     background-color: #10273A;
     padding: 15px 5%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
 
-/*Logo de la cabecera*/
 .logo img {
     width: 200px;
-    height: auto;
     display: block;
 }
 
-/*Menu de Navegacion*/
 .menu {
     display: flex;
     align-items: center;
@@ -44,7 +54,6 @@ body {
     color: #35BDA6;
 }
 
-/* BOTÓN ENVIAR CV */
 .menu .boton_CV {
     background-color: #35BDA6;
     color: #10273A;
@@ -59,47 +68,36 @@ body {
 }
 /*FIN DE LA CABECERA*/
 
-
-
 /*PORTADA PRINCIPAL*/
 .portada {
-    background-color: #10273A;
+    background-color: #0f3246;
     color: white;
     padding: 80px 8%;
-
     display: flex;
     align-items: center;
     gap: 50px;
 }
 
-/*texto de la portada*/
-.texto_portada {
+.texto_portada, .imagen_portada {
     flex: 1;
+    min-width: 0;
 }
 
-/*subtitulo de la portada*/
-.subtitulo_portada {
+.portada .subtitulo {
     color: #35BDA6;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
 }
 
-/*titulo de la portada*/
-.titulo_portada {
+.portada .titulo {
+    color: white;
     font-size: 45px;
     line-height: 1.2;
     margin: 20px 0;
 }
 
-/*descripcion*/
-.descripcion_portada {
-    font-size: 16px;
-    line-height: 1.7;
+.portada .descripcion {
     color: #D2E2EB;
 }
 
-/*BOTONES DE LA PORTADA*/
 .botones_portada{
     display: flex;
     flex-wrap: wrap;
@@ -130,20 +128,53 @@ body {
     color: #10273A;
 }
 
-/*IMAGEN DE LA PORTADA*/
-.imagen_portada {
-    flex: 1;
-    min-width: 0;
-}
 .imagen_portada img {
     width: 100%;
-    height: auto;
     display: block;
     border-radius: 12px;
 }
+/*FIN DE LA PORTADA*/
 
+/*QUIENES SOMOS*/
+.quienes_somos {
+    background-color: white;
+    padding: 70px 8%;
+    text-align: center;
+}
 
-/*CSS PARA PANTALLAS PEQUEÑAS*/
+/*textos y titulos de quienes somos*/
+.quienes_somos .descripcion {
+    color: #526779;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.tarjetas_quienes_somos {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+}
+.tarjeta_quienes_somos {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #E0E8EB;
+    border-radius: 10px;
+    padding: 25px; 
+}
+.tarjeta_quienes_somos h3 {
+    color: #10273A;
+    font-size: 18px;
+    margin-top: 0;
+}
+.tarjeta_quienes_somos p {
+    color: #526779;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+/*FIN DE QUIENES SOMOS*/
+
+/*!CSS PARA PANTALLAS PEQUEÑAS*/
 @media (max-width: 850px) {
     .cabecera {
         flex-direction: column;
@@ -158,4 +189,5 @@ body {
         text-align: center;
     }
     /*TODO PANTALLA PEQUEÑA LA PORTADA*/  
+    /*TODO PANTALLA PEQUEÑA DE QUIENES SOMOS*/
 }
