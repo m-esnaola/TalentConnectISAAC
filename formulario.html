@@ -8,47 +8,68 @@
 <body>
     <h1>TalentConnect</h1>
     <form action="", method="POST" enctype="multipart/form-data">
-        <h2>Datos del candidato</h2>
-        <br>
+
+        <fieldset>
+            <legend>Datos del candidato</legend>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre"/>
-        <br>
-        <br>
+            <br>
+            <br>
             <label for="edad">Edad:</label>
             <input type="number" id="edad" name="edad"/>
-        <br>
-
-
-        
-        
-        <br>
+            <br>
             Email: <input type="email" name="email" id="email">
-        <br>
-        
-        <br>
             <label for="nacimiento">Fecha de nacimiento:</label>
             <input type="date" id="nacimiento" name="nacimiento">
-        <br>
-        <br>
-            <h2>¿Experiencia laboral?</h2>
-        
-            si <input type="radio" name="experiencia" value="si">
-            no <input type="radio"name="experiencia" value="no">
-        <br>
-            
-        
-        <br>
-            Tecnologias conocidas: <label for="direction"></label>
-            <textarea name="Tecnologias" id="Tecnologias"></textarea>
-        <br>
+        </fieldset>
 
-        <br>                              
-            ¿Que idiomas hablas?<label for="direction"></label>
-            <textarea name="idiomas" id="idiomas"></textarea>
-        <br>
-        <br>
-            <input type="submit" value="Enviar">
-        <br>
+        <div class="campo">
+            <label for="puesto">Oferta a la que aplica</label>
+            <select  id="puesto">
+                <option value="">Selecciona</option>
+                <option >Desarrollo De Aplicaciones Moviles</option>
+                <option >Desarrollo Web</option>
+                <option >Gestion de bases de datos</option>
+            </select>
+        </div>
+
+        <div class="campo">
+          <label for="experiencia">Años de experiencia</label>
+          <input type="number" id="experiencia" min="0" max="40" value="0">
+        </div>
+ 
+        <div class="campo">
+            <span>Modalidad preferida</span>
+            <div class="opciones">
+                <label><input type="radio" name="modalidad" value="Presencial" checked> Presencial</label>
+                <label><input type="radio" name="modalidad" value="Remoto"> Remoto</label>
+                <label><input type="radio" name="modalidad" value="Híbrido"> Híbrido</label>
+            </div>
+        </div>
+        
+        <div class="campo">
+            <span>Habilidades</span>
+            <div class="opciones">
+                <label><input type="checkbox" name="habilidades" value="HTML"> HTML</label>
+                <label><input type="checkbox" name="habilidades" value="CSS"> CSS</label>
+                <label><input type="checkbox" name="habilidades" value="JavaScript"> JavaScript</label>
+                <label><input type="checkbox" name="habilidades" value="Python"> Python</label>
+                <label><input type="checkbox" name="habilidades" value="SQL"> SQL</label>
+                <label><input type="checkbox" name="habilidades" value="Inglés"> Inglés</label>
+          </div>
+        </div>
+            
+        <label class="acepto">
+          <input type="checkbox" id="privacidad">
+          La persona candidata ha dado su consentimiento para el tratamiento de sus datos.
+        </label>
+          <p id="errores" class="error"></p>
+
+        <div class="botones">
+          <button type="submit" class="botonEnviar">Guardar CV</button>
+          <button type="reset" class="botonBorrar">Limpiar</button>
+        </div>
+    </form>
 
 
 
