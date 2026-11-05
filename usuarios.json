@@ -1,9 +1,14 @@
 {
     "usuarios": [
         {
-            "nombre": "Maitane",
-            "correo": "m.esnaola04@gmail.com",
-            "contrase\u00f1a": "1234"
+            "nombre": "Prueba",
+            "correo": "prueba@gmail.com",
+            "contrasenia": "1234"
+        },
+        {
+            "nombre": "1",
+            "correo": "1@gmail.com",
+            "contrasenia": "1"
         }
     ]
 }
