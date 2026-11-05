@@ -74,7 +74,7 @@
         </div>
             
         <label class="acepto">
-          <input type="radio" id="privacidad">
+          <input type="radio" id="privacidad"> #Poner que este campo sea oblogatorio con "required"
           La persona candidata ha dado su consentimiento para el tratamiento de sus datos.
         </label>
           <p id="errores" class="error"></p>
@@ -86,6 +86,15 @@
     </form>
 
     <script>
+        function ValidarForm() {
+            var nombre = document.getElementById("nombre").value;
+            var edad = document.getElementById("edad").value;
+            var nacimiento = document.getElementById("nacimiento").value;
+            var email = document.getElementById("email").value;
+            var experiencia = document.getElementById("experiencia").value;
+            
+
+        }
 
     </script>
 
