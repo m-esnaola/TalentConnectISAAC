@@ -64,8 +64,9 @@ def fn_mostrar_candidtos_de_oferta():
         return
     # Erabiltzaileari eskaintzaren IDa eskatu
     while True:
-        opcion_oferta_int = input("Introduce el ID de la oferta: ")
-        if opcion_oferta_int.isdigit():
+        opcion_oferta_str = input("Introduce el ID de la oferta: ")
+        if opcion_oferta_str.isdigit():
+            opcion_oferta_int = int(opcion_oferta_str)
             break
         print("Introduce un ID numerico valido")
     # Aukeratutako eskaintza bilatu
@@ -77,6 +78,4 @@ def fn_mostrar_candidtos_de_oferta():
             print("\nLista de candidatos: ")
             #TODO: Aukeratutako eskaintzan izena eman duten hautagaien laburpena erakutsi.
             return
-        
     print("No existe ninguna oferta con ese ID")
-    return
