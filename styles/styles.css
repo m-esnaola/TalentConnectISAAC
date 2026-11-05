@@ -1,1 +1,75 @@
-/*En este css tendremos todo el css de formulario.html
+/* ESTILOS GENERALES DE TALENTCONNECT */
+
+/* MAITANE - PAGINA PRINCIPAL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*CABECERA*/
+.cabecera {
+    background-color: #10273A;
+    padding: 15px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/*Logo de la cabecera*/
+.logo img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+/*Menu de Navegacion*/
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    color: #35BDA6;
+}
+
+/* BOTÓN ENVIAR CV */
+.menu .boton_CV {
+    background-color: #35BDA6;
+    color: #10273A;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.menu .boton_CV:hover {
+    background-color: #66DCC8;
+    color: #10273A;
+}
+
+@media (max-width: 850px) {
+    .cabecera {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .logo img {
+        width: 230px;
+    }
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/*FIN DE LA CABECERA*/
