@@ -19,7 +19,7 @@ def fn_leer_candidatos_dict():
     #Erabiltzaileak JSON fitxategitik irakurri
 
     if os.path.exists("candidatos.json"):
-        with open("usuarios.json", "r",  encoding="utf-8") as archivo:
+        with open("candidatos.json", "r",  encoding="utf-8") as archivo:
             print("Archivos leidos correctamente")
             return json.load(archivo)
         
