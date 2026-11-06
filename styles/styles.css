@@ -57,22 +57,27 @@ body {
     background-color: #66DCC8;
     color: #10273A;
 }
+.menu a:hover, .columna_footer a:hover {
+    color: #35BDA6;
+}
 .botones_portada a, .boton_oportunidades {
     text-decoration: none;
     padding: 14px 22px;
     border-radius: 6px;
     font-weight: bold;
 }
+.cabecera, .footer {
+    background-color: #10273A;
+    display: flex;
+    gap: 20px;
+}
 /**FIN DE ESTILOS COMPARTIDOS*/
 
 /**CABECERA*/
 .cabecera {
-    background-color: #10273A;
     padding: 15px 5%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
 }
 
 .logo img {
@@ -91,9 +96,6 @@ body {
     color: white;
     text-decoration: none;
     font-size: 15px;
-}
-.menu a:hover {
-    color: #35BDA6;
 }
 .menu .boton_CV {
     padding: 10px 20px;
@@ -212,6 +214,39 @@ body {
     background-color: #1D5060;
 }
 /**FIN DE DESCUBRIR OPORTUNIDADES*/
+
+/**FOOTER*/
+.footer {
+    color: white;
+    padding: 40px 8%;
+    flex-wrap: wrap;
+}
+.columna_footer {
+    flex: 1;
+    min-width: 180px;
+}
+.columna_footer h3 {
+    font-size: 17px;
+    margin-top: 0;
+}
+.columna_footer p, .columna_footer a {
+    color: #C4D6E0;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.columna_footer a {
+    display: block;
+    text-decoration: none;
+}
+.copyright_footer {
+    width: 100%;
+    border-top: 1px solid #375063;
+    padding-top: 15px;
+    text-align: center;
+    color: #C4D6E0;
+    font-size: 12px;
+}
+/**FIN DEL FOOTER*/
 
 /*!CSS PARA PANTALLAS PEQUEÑAS*/
 @media (max-width: 850px) {
