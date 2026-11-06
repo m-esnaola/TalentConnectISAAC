@@ -46,8 +46,16 @@ def fn_mostrar_candidatos_dict():
         print("Nombre:", candidato_dict["nombre"])
         print("Email:", candidato_dict["email"])
         print("Telefono:", candidato_dict["telefono"])
-
+        for tecnologia_dict in candidato_dict["tecnologias"]:
+            print("Nombre:", tecnologia_dict["nombre"])
+            print("Experiencia:", tecnologia_dict["experiencia"])
+            for idioma_dict in candidato_dict["idiomas"]:
+                print("Nombre:", idioma_dict["nombre"])
+                print("Nivel:", idioma_dict["nivel"])
 fn_mostrar_candidatos_dict()
+
+
+
 
 
     
