@@ -1,7 +1,7 @@
 /* ESTILOS GENERALES DE TALENTCONNECT */
 
 /*! MAITANE - PAGINA PRINCIPAL */
-/**Estilos compartidos*/
+/**ESTILOS COMPARTIDOS*/
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -21,11 +21,12 @@ body {
     font-size: 16px;
     line-height: 1.7;
 }
-.quienes_somos, .como_empezar{
+.quienes_somos, .como_empezar, .descubrir_oportunidades {
     padding: 70px 8%;
     text-align: center;
 }
-.quienes_somos .descripcion, .como_empezar .descripcion{
+.quienes_somos .descripcion, .como_empezar .descripcion, .descubrir_oportunidades .descripcion
+{
     color: #526779;
     max-width: 750px;
     margin: 0 auto;
@@ -56,6 +57,13 @@ body {
     background-color: #66DCC8;
     color: #10273A;
 }
+.botones_portada a, .boton_oportunidades {
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+/**FIN DE ESTILOS COMPARTIDOS*/
 
 /**CABECERA*/
 .cabecera {
@@ -130,12 +138,6 @@ body {
     gap: 15px;
     margin-top: 30px;
 }
-.botones_portada a {
-    text-decoration: none;
-    padding: 14px 22px;
-    border-radius: 6px;
-    font-weight: bold;
-}
 .boton_formulario {
     border: 2px solid white;
     color: white;
@@ -196,6 +198,20 @@ body {
 }
 /**FIN DE COMO EMPEZAR*/
 
+/**DESCUBRIR OPORTUNIDADES*/
+.descubrir_oportunidades {
+    background-color: #E5F5F0;
+}
+.boton_oportunidades {
+    display: inline-block;
+    background-color: #10273A;
+    color: white;
+    margin-top: 30px;
+}
+.boton_oportunidades:hover {
+    background-color: #1D5060;
+}
+/**FIN DE DESCUBRIR OPORTUNIDADES*/
 
 /*!CSS PARA PANTALLAS PEQUEÑAS*/
 @media (max-width: 850px) {
