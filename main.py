@@ -1,5 +1,10 @@
 from ofertas import fn_mostrar_ofertas, fn_mostrar_candidtos_de_oferta
 
+
+#TODO: Crear un menu inicial donde el usuario pueda elegir entre iniciar sesion o crear cuenta
+
+
+
 #TODO: DOkumentazioa aldatu eta euskaraz jarri
 while(1 == 1):
 

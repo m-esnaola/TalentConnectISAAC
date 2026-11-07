@@ -14,6 +14,8 @@
 
 import json
 import os
+
+
 def fn_leer_candidatos_dict():
 
     #Erabiltzaileak JSON fitxategitik irakurri
@@ -52,17 +54,52 @@ def fn_mostrar_candidatos_dict():
             for idioma_dict in candidato_dict["idiomas"]:
                 print("Nombre:", idioma_dict["nombre"])
                 print("Nivel:", idioma_dict["nivel"])
+
+#Funcion para comprobar como se van imprimiendo:
 fn_mostrar_candidatos_dict()
 
 
+#TODO: Buscar un candidato por ID y mostrar su información.
+#Explicación de como hacerlo:
+    #Se pedira al usuario que escriba por pantalla el ID del candidato que quiere buscar.
+    #Se comprobará primero que es un ID valido (que es numerico)
+    #Se comprobara si el ID existe en el diccionario de candidato o no
+        #si existe se mostrará toda la información del candidato
+        #si no existe se mostrará un mensaje de que no hay ningun candidato registrado con ese ID
 
+def fn_mostrar_candidato_por_id():
+    print()
 
-
+#TODO: Filtrar candidatos por tecnologías, idiomas y experiencia.
+#Explicación de como hacerlo:
+    #Hay 2 opciones de implementarlo:
+        #1. Se pedira al usuario que escriba por pantalla la tecnologia, idioma y experiencia 
+        #que quiere filtrar
+        #2. Se pedira al usuario que elija por cual de las 3 opciones quiere filtrar
+        # (tecnologia, idioma o experiencia) y luego se pedira que escriba por pantalla la 
+        # tecnologia, idioma o experiencia que quiere filtrar
+        #En ambos casos se comprobara si hay candidatos que cumplan con los filtros o no
+        #Los que cumplan los requisitos se guardarán en una lista
+        #Tras revisar todos los candidatos, se imprimira por pantalla la lista de candidatos
+        #que cumplen los requisitos
     
+def fn_filtrar_candidatos():
+    print()
 
 
-
-
+#TODO: Añadir candidatos
+#Explicación de como hacerlo:
+    #Se pedira al usuario que escriba por pantalla toda la información del candidato
+    # (nombre, email, telefono, tecnologias, idiomas y experiencia)
+    #Se comprobara que el ID del candidato no exista ya en el diccionario de candidatos
+    #Si existe se mostrará un mensaje de error y se pedira al usuario que escriba otro ID
+    #Si no existe se añadirá el candidato al diccionario de candidatos y se guardará en el archivo JSON
+        #Para poder guardarlo en el arcivo JSON, primero tenremos que llamar a la funcion que lee
+        #todas las candidaturas y guardarlos en una variable
+        #Con nuestro nuevo candidato, se añadira a esa variable con .append()
+        #Y se reescribe todo el archivo JSON
+def fn_añadir_candidato():
+    print()
     
 
 
