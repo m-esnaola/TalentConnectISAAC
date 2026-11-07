@@ -43,7 +43,6 @@ while(1 == 1):
         # Cada opción del submenú llamará a una función diferente.
 
     # * ESKAINTZEN KONTSULTA
-    # TODO: Aukeratutako eskaintzako hautagaien laburpena erakutsi.
     elif (selecion_int == 2):
         print("Opción de consulta de ofertas seleccionado")
         # Eskaintzen kontsultarako azpimenua.

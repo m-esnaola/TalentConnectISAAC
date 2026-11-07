@@ -56,7 +56,7 @@ def fn_mostrar_candidatos_dict():
                 print("Nivel:", idioma_dict["nivel"])
 
 #Funcion para comprobar como se van imprimiendo:
-fn_mostrar_candidatos_dict()
+#fn_mostrar_candidatos_dict()
 
 
 #TODO: Buscar un candidato por ID y mostrar su información.

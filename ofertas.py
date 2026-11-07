@@ -1,5 +1,6 @@
 import json
 import os
+from candidatos import fn_leer_candidatos_dict
 
 
 
@@ -55,9 +56,10 @@ def fn_mostrar_ofertas():
 
 
 
-# TODO: Eskaintza jakin batean izena eman duten hautagaiak erakutsi
+# * Eskaintza jakin batean izena eman duten hautagaiak erakutsi
 def fn_mostrar_candidtos_de_oferta():
     ofertas_dict = fn_leer_ofertas_dict()
+    candidatos_dict = fn_leer_candidatos_dict()
     # Eskaintzarik ez badago, funtzioa amaitu
     if not ofertas_dict["ofertas"]:
         print("No hay ofertas disponibles")
@@ -74,8 +76,24 @@ def fn_mostrar_candidtos_de_oferta():
         if opcion_oferta_int == oferta_dict["id_oferta"]:
             print("ID:", oferta_dict["id_oferta"])
             print("Oferta:", oferta_dict["titulo"])
+
+            if not oferta_dict["candidaturas"]:
+                print("No hay candidatos inscritos en esa oferta.")
+                return
+
             print("\nCandidaturas recibidas:", len(oferta_dict["candidaturas"]))
-            print("\nLista de candidatos: ")
-            #TODO: Aukeratutako eskaintzan izena eman duten hautagaien laburpena erakutsi.
+            
+            print("\n========== LISTA DE CANDIDATOS ==========")
+            for candidatura_dict in oferta_dict["candidaturas"]:
+                for candidato_dict in candidatos_dict["candidatos"]:
+                    if candidatura_dict["id_candidato"] == candidato_dict["id_candidato"]:
+                        print("\nID:", candidato_dict["id_candidato"])
+                        print("Nombre:", candidato_dict["nombre"])
+                        print("Email:", candidato_dict["email"])
+                        print("Telefono:", candidato_dict["telefono"])
+                        print("Fecha:", candidatura_dict["fecha"])
+                        print("Estado:", candidatura_dict["estado"])
+                        print("----------------------------------")
+                        break
             return
     print("No existe ninguna oferta con ese ID")
