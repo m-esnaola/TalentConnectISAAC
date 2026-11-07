@@ -59,16 +59,42 @@ def fn_mostrar_candidatos_dict():
 #fn_mostrar_candidatos_dict()
 
 
-#TODO: Buscar un candidato por ID y mostrar su información.
-#Explicación de como hacerlo:
-    #Se pedira al usuario que escriba por pantalla el ID del candidato que quiere buscar.
-    #Se comprobará primero que es un ID valido (que es numerico)
-    #Se comprobara si el ID existe en el diccionario de candidato o no
-        #si existe se mostrará toda la información del candidato
-        #si no existe se mostrará un mensaje de que no hay ningun candidato registrado con ese ID
 
+# * Hautagai bat IDaren bidez bilatu eta bere informazioa erakutsi
 def fn_mostrar_candidato_por_id():
-    print()
+    """Hautagai bat bere IDaren bidez bilatu eta haren informazio guztia pantailan erakutsi."""
+    candidatos_dict = fn_leer_candidatos_dict()
+    if not candidatos_dict["candidatos"]:
+            print("No hay candidatos disponibles")
+            return
+    while True:
+        opcion_candidato_str = input("Introduce el ID del candidato: ")
+        if opcion_candidato_str.isdigit():
+            opcion_candidato_int = int(opcion_candidato_str)
+            break
+        print("Introduce un ID numerico valido")
+    for candidato_dict in candidatos_dict["candidatos"]:
+        if opcion_candidato_int == candidato_dict["id_candidato"]:
+            print("\n========== INFORMACIÓN DEL CANDIDATO ==========\n")
+            print("ID:", candidato_dict["id_candidato"])
+            print("Nombre:", candidato_dict["nombre"])
+            print("Email:", candidato_dict["email"])
+            print("Telefono:", candidato_dict["telefono"])
+            print("\nTecnologías:")
+            for tecnologia_dict in candidato_dict["tecnologias"]:
+                print("-", tecnologia_dict["nombre"])
+                print("  Experiencia:", tecnologia_dict["experiencia"], "años")
+
+            print("\nIdiomas:")
+            for idioma_dict in candidato_dict["idiomas"]:
+                print("-", idioma_dict["nombre"])
+                print("  Nivel:", idioma_dict["nivel"])
+
+            print("===============================================\n")
+            return
+        
+    print("No hay ningún candidato registrado con ese ID")
+
 
 #TODO: Filtrar candidatos por tecnologías, idiomas y experiencia.
 #Explicación de como hacerlo:

@@ -58,6 +58,7 @@ def fn_mostrar_ofertas():
 
 # * Eskaintza jakin batean izena eman duten hautagaiak erakutsi
 def fn_mostrar_candidtos_de_oferta():
+    """Eskaintza jakin batean izena eman duten hautagaien informazioa pantailan erakutsi."""
     ofertas_dict = fn_leer_ofertas_dict()
     candidatos_dict = fn_leer_candidatos_dict()
     # Eskaintzarik ez badago, funtzioa amaitu
