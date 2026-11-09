@@ -4,6 +4,7 @@ from candidatos import fn_mostrar_candidato_por_id
 from candidatos import fn_mostrar_candidatos_dict
 from ofertas import fn_mostrar_ofertas, fn_mostrar_candidatos_de_oferta
 from usuario import fn_crear_cuenta_dict, fn_iniciar_sesion_dict
+from procesos_seleccion import fn_cambiar_estado_candidatura, fn_consultar_candidaturas_por_estado
 
 
 # * ERABILTZAILEAREN SARBIDE-MENUA
@@ -78,9 +79,9 @@ def fn_menu_procesos():
         if seleccion_proceso_str == "0":
             break
         elif seleccion_proceso_str == "1":
-            print("Todavía no implementado")
+            fn_cambiar_estado_candidatura()
         elif seleccion_proceso_str == "2":
-            print("Todavía no implementado")
+            fn_consultar_candidaturas_por_estado()
         else:
             print("ERROR. Opción no válida.")
 
