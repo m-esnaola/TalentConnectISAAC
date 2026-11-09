@@ -19,7 +19,7 @@ def fn_menu_acceso():
         print("1 --> Iniciar sesión")
         print("2 --> Crear cuenta")
 
-        seleccion_acceso_str = input("\nSeleccione una opción: ")
+        seleccion_acceso_str = input("\nSeleccione una opción: ").strip()
         if seleccion_acceso_str == "0":
             print("Adiós, vuelva pronto")
             break
@@ -117,6 +117,8 @@ def fn_menu_principal(usuario_dict):
             fn_menu_ofertas()
         elif seleccion_str=="3":
             fn_menu_procesos()
+        else:
+            print("ERROR. Opción no válida.")
 
 
 

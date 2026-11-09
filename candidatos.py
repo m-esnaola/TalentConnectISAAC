@@ -38,7 +38,7 @@ def fn_mostrar_candidatos_dict():
     total_candidatos_dict = fn_leer_candidatos_dict()
 
     
-    if total_candidatos_dict["candidatos"] == False:
+    if not total_candidatos_dict["candidatos"]:
         print("No hay candidatos registrados.")
         return
     
@@ -51,9 +51,9 @@ def fn_mostrar_candidatos_dict():
         for tecnologia_dict in candidato_dict["tecnologias"]:
             print("Nombre:", tecnologia_dict["nombre"])
             print("Experiencia:", tecnologia_dict["experiencia"])
-            for idioma_dict in candidato_dict["idiomas"]:
-                print("Nombre:", idioma_dict["nombre"])
-                print("Nivel:", idioma_dict["nivel"])
+        for idioma_dict in candidato_dict["idiomas"]:
+            print("Nombre:", idioma_dict["nombre"])
+            print("Nivel:", idioma_dict["nivel"])
 
 #Funcion para comprobar como se van imprimiendo:
 #fn_mostrar_candidatos_dict()
