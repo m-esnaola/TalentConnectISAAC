@@ -69,6 +69,24 @@ def fn_menu_candidatos():
                 print("Error, opcion no valida ")
             
 
+def fn_menu_procesos():
+    """Hautaketa-prozesuak kudeatzeko azpimenua erakutsi."""
+    while True:
+        print("\n========== PROCESOS DE SELECCIÓN ==========")
+        print("0 --> Volver al menú principal")
+        print("1 --> Cambiar el estado de una candidatura")
+        print("2 --> Consultar candidaturas por estado")
+
+        seleccion_proceso_str = input("\nSeleccione una opción: ").strip()
+
+        if seleccion_proceso_str == "0":
+            break
+        elif seleccion_proceso_str == "1":
+            print("Todavía no implementado")
+        elif seleccion_proceso_str == "2":
+            print("Todavía no implementado")
+        else:
+            print("ERROR. Opción no válida.")
 
         
         
