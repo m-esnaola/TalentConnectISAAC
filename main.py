@@ -50,6 +50,31 @@ def fn_menu_candidatos():
         else:
             print("Error , opcion no valida")
 
+    def fn_menu_ofertas():
+
+        while True:
+              print("CONSULTA DE OFERTAS\n ")
+              print("0. Volver al menu principal")
+              print("1. Mostrar todas las ofertas")
+              print("2. Mostrar los candidatos de una oferta")
+
+              seleccion_oferta_str=input("Seleccione una opcion").strip()
+              if seleccion_oferta_str == "0":
+                    break
+              elif seleccion_oferta_str=="1":
+                    fn_mostrar_ofertas()
+              elif seleccion_oferta_str=="2":
+                    fn_mostrar_candidatos_de_oferta()
+              else:
+                print("Error, opcion no valida ")
+            
+
+
+        
+        
+
+
+
 # * TALENTCONNECT MENU NAGUSIA
 #TODO: funtzioak bukatu
 def fn_menu_principal(usuario_dict):
