@@ -1,3 +1,7 @@
+from candidatos import fn_añadir_candidato
+from candidatos import fn_filtrar_candidatos
+from candidatos import fn_mostrar_candidato_por_id
+from candidatos import fn_mostrar_candidatos_dict
 from ofertas import fn_mostrar_ofertas, fn_mostrar_candidtos_de_oferta
 from usuario import fn_crear_cuenta_dict, fn_iniciar_sesion_dict
 
@@ -27,6 +31,24 @@ def fn_menu_acceso():
         else:
             print("ERROR. Opción no valida.")
 
+
+
+def fn_menu_candidatos():
+    while True:
+        print("GESTION DE CANDIDATOS\n0. Volver al menu principal\n1. Mostrar todos los candidatos\n2. Buscar candidatos por ID\n3. Filtrar candidatos\n4. Añadir candidato")
+        seleccion_candidatos_str=input("Seleccione una opcion:").strip()
+        if seleccion_candidatos_str=="0":
+            break
+        elif seleccion_candidatos_str=="1":
+            fn_mostrar_candidatos_dict()
+        elif seleccion_candidatos_str=="2":
+            fn_mostrar_candidato_por_id()
+        elif seleccion_candidatos_str=="3":
+            fn_filtrar_candidatos()
+        elif seleccion_candidatos_str=="4":
+            fn_añadir_candidato()
+        else:
+            print("Error , opcion no valida")
 
 # * TALENTCONNECT MENU NAGUSIA
 #TODO: funtzioak bukatu
@@ -62,6 +84,14 @@ def fn_menu_principal(usuario_dict):
         # * GESTIÓN DE CANDIDATOS
         elif (selecion_int == 1):
             print("Opción de gestión de candidatos seleccionado")
+
+
+
+
+
+
+
+
             # TODO: Crear un submenú para gestionar candidatos.
             # - Mostrar todos los candidatos registrados.
             # - Buscar un candidato por ID y mostrar su información.
