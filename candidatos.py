@@ -138,7 +138,36 @@ def fn_filtrar_candidatos():
         #Con nuestro nuevo candidato, se añadira a esa variable con .append()
         #Y se reescribe todo el archivo JSON
 def fn_añadir_candidato():
-    print()
+    candidatos_dict =fn_leer_candidatos_dict()
+
+    id_str =input("Introduce el ID del candidato:").strip()
+    if not id_str.isdigit():
+        print("El id debe de ser un numero")
+        return
+    id_int=int(id_str)
+    
+    for c_dict in candidatos_dict["candidatos"]:
+        if c_dict["id_candidato"] == id_int:
+            print("Ese id ya existe")
+            return
+    
+    nombre_str=input("Introduce el nombre: ").strip()
+    email_str=input("Introduce el email: ").strip()
+    #El telefono con str porque asi lo tenemos guardado en el json
+    telefono_str=input("Introduce el numero de telefono: ").strip()
+
+    nuevo_candidato_dict = {
+        "id_candidato": id_int,
+        "nombre": nombre_str,
+        "email": email_str,
+        "telefono": telefono_str,
+        "tecnologias": [],
+        "idiomas": []
+    }
+    candidatos_dict["candidatos"].append(nuevo_candidato_dict)
+    with open("candidatos.json","w",encoding="utf-8")as archivo:
+        json.dump(candidatos_dict,archivo,indent=4,ensure_ascii=False)
+    print("Candidato añadido correctamente")
     
 
 
