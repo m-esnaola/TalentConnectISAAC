@@ -2,7 +2,7 @@ from candidatos import fn_añadir_candidato
 from candidatos import fn_filtrar_candidatos
 from candidatos import fn_mostrar_candidato_por_id
 from candidatos import fn_mostrar_candidatos_dict
-from ofertas import fn_mostrar_ofertas, fn_mostrar_candidtos_de_oferta
+from ofertas import fn_mostrar_ofertas, fn_mostrar_candidatos_de_oferta
 from usuario import fn_crear_cuenta_dict, fn_iniciar_sesion_dict
 
 
