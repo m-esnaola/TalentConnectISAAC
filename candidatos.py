@@ -110,7 +110,20 @@ def fn_mostrar_candidato_por_id():
         #que cumplen los requisitos
     
 def fn_filtrar_candidatos():
-    print()
+    candidatos_dict =fn_leer_candidatos_dict()
+    tec_filtro_str=input("Introduce la tecnologia para filtrar: ").strip().lower()
+
+    encontrado_bool = False
+    for candidato_dict in candidatos_dict["candidatos"]:
+        for tec_dict in candidato_dict["tecnologias"]:
+            if tec_dict["nombre"].lower() == tec_filtro_str:
+                print("ID:",candidato_dict["id_candidato"],"-",candidato_dict["nombre"],"-","Experiencia:",tec_dict["experiencia"],"años" )
+                encontrado_bool=True
+                break
+
+    if not encontrado_bool:
+        print("No se encontraron candidatos con esa tecnologia")
+
 
 
 #TODO: Añadir candidatos
