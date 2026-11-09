@@ -38,7 +38,7 @@ def fn_mostrar_candidatos_dict():
     total_candidatos_dict = fn_leer_candidatos_dict()
 
     
-    if total_candidatos_dict["candidatos"] == False:
+    if not total_candidatos_dict["candidatos"]:
         print("No hay candidatos registrados.")
         return
     
@@ -51,9 +51,9 @@ def fn_mostrar_candidatos_dict():
         for tecnologia_dict in candidato_dict["tecnologias"]:
             print("Nombre:", tecnologia_dict["nombre"])
             print("Experiencia:", tecnologia_dict["experiencia"])
-            for idioma_dict in candidato_dict["idiomas"]:
-                print("Nombre:", idioma_dict["nombre"])
-                print("Nivel:", idioma_dict["nivel"])
+        for idioma_dict in candidato_dict["idiomas"]:
+            print("Nombre:", idioma_dict["nombre"])
+            print("Nivel:", idioma_dict["nivel"])
 
 #Funcion para comprobar como se van imprimiendo:
 #fn_mostrar_candidatos_dict()
@@ -110,7 +110,20 @@ def fn_mostrar_candidato_por_id():
         #que cumplen los requisitos
     
 def fn_filtrar_candidatos():
-    print()
+    candidatos_dict =fn_leer_candidatos_dict()
+    tec_filtro_str=input("Introduce la tecnologia para filtrar: ").strip().lower()
+
+    encontrado_bool = False
+    for candidato_dict in candidatos_dict["candidatos"]:
+        for tec_dict in candidato_dict["tecnologias"]:
+            if tec_dict["nombre"].lower() == tec_filtro_str:
+                print("ID:",candidato_dict["id_candidato"],"-",candidato_dict["nombre"],"-","Experiencia:",tec_dict["experiencia"],"años" )
+                encontrado_bool=True
+                break
+
+    if not encontrado_bool:
+        print("No se encontraron candidatos con esa tecnologia")
+
 
 
 #TODO: Añadir candidatos
@@ -125,7 +138,36 @@ def fn_filtrar_candidatos():
         #Con nuestro nuevo candidato, se añadira a esa variable con .append()
         #Y se reescribe todo el archivo JSON
 def fn_añadir_candidato():
-    print()
+    candidatos_dict =fn_leer_candidatos_dict()
+
+    id_str =input("Introduce el ID del candidato:").strip()
+    if not id_str.isdigit():
+        print("El id debe de ser un numero")
+        return
+    id_int=int(id_str)
+    
+    for c_dict in candidatos_dict["candidatos"]:
+        if c_dict["id_candidato"] == id_int:
+            print("Ese id ya existe")
+            return
+    
+    nombre_str=input("Introduce el nombre: ").strip()
+    email_str=input("Introduce el email: ").strip()
+    #El telefono con str porque asi lo tenemos guardado en el json
+    telefono_str=input("Introduce el numero de telefono: ").strip()
+
+    nuevo_candidato_dict = {
+        "id_candidato": id_int,
+        "nombre": nombre_str,
+        "email": email_str,
+        "telefono": telefono_str,
+        "tecnologias": [],
+        "idiomas": []
+    }
+    candidatos_dict["candidatos"].append(nuevo_candidato_dict)
+    with open("candidatos.json","w",encoding="utf-8")as archivo:
+        json.dump(candidatos_dict,archivo,indent=4,ensure_ascii=False)
+    print("Candidato añadido correctamente")
     
 
 
