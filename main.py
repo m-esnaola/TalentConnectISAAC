@@ -50,24 +50,20 @@ def fn_menu_candidatos():
         else:
             print("Error , opcion no valida")
 
-    def fn_menu_ofertas():
 
-        while True:
-              print("CONSULTA DE OFERTAS\n ")
-              print("0. Volver al menu principal")
-              print("1. Mostrar todas las ofertas")
-              print("2. Mostrar los candidatos de una oferta")
+def fn_menu_ofertas():
+    while True:
+        print("CONSULTA DE OFERTAS\n0. Volver al menu principal\n1. Mostrar todas las ofertas\n2. Mostrar los candidatos de una oferta")
+        seleccion_oferta_str=input("Seleccione una opcion: ").strip()
+        if seleccion_oferta_str=="0":
+            break
+        elif seleccion_oferta_str=="1":
+            fn_mostrar_ofertas()
+        elif seleccion_oferta_str=="2":
+            fn_mostrar_candidatos_de_oferta()
+        else:
+            print("Error , opcion no valida")
 
-              seleccion_oferta_str=input("Seleccione una opcion").strip()
-              if seleccion_oferta_str == "0":
-                    break
-              elif seleccion_oferta_str=="1":
-                    fn_mostrar_ofertas()
-              elif seleccion_oferta_str=="2":
-                    fn_mostrar_candidatos_de_oferta()
-              else:
-                print("Error, opcion no valida ")
-            
 
 def fn_menu_procesos():
     """Hautaketa-prozesuak kudeatzeko azpimenua erakutsi."""
@@ -118,8 +114,7 @@ def fn_menu_principal(usuario_dict):
         elif seleccion_str=="1":
             fn_menu_candidatos()
         elif seleccion_str=="2":
-            print
-            #fn_menu_ofertas() comentado porque aun no existe
+            fn_menu_ofertas()
         elif seleccion_str=="3":
             print
             #fn_menu_procesos() comentado porque aun no existe
