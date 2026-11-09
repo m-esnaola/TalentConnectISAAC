@@ -31,3 +31,10 @@ def fn_elegir_estado_str():
     return estado_elegido_str
 
     # * Eskaintza bat bilatu IDaren bidez
+def fn_buscar_oferta_dict(id_oferta_int,ofertas_int):
+    """Id aren bidez eskaintza bilatu eta dict edo None itzuli"""
+    for oferta_dict in ofertas_list:
+        if oferta_dict["id_oferta"] == id_oferta_int:
+            return oferta_dict
+    """Eskaintza aurkitzen ez bada bueltatu none"""
+    return None
