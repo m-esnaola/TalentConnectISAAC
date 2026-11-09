@@ -1,0 +1,452 @@
+/* ESTILOS GENERALES DE TALENTCONNECT */
+
+/*! MAITANE - PAGINA PRINCIPAL */
+/**ESTILOS COMPARTIDOS*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.subtitulo {
+    color: #168B79;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.titulo {
+    color: #10273A;
+    font-size: 32px;
+    margin: 15px 0;
+}
+.descripcion {
+    font-size: 16px;
+    line-height: 1.7;
+}
+.quienes_somos, .como_empezar, .descubrir_oportunidades {
+    padding: 70px 8%;
+    text-align: center;
+}
+.quienes_somos .descripcion, .como_empezar .descripcion, .descubrir_oportunidades .descripcion
+{
+    color: #526779;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.tarjetas_quienes_somos, .tarjetas_como_empezar {
+    display: flex;
+    margin-top: 40px;
+    gap: 30px;
+}
+.tarjeta_quienes_somos, .tarjeta_como_empezar {
+    flex: 1;
+    min-width: 0;
+}
+.tarjeta_quienes_somos h3, .tarjeta_como_empezar h3 {
+    color: #10273A;
+    font-size: 18px;
+}
+.tarjeta_quienes_somos p, .tarjeta_como_empezar p {
+    color: #526779;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.menu .boton_CV, .boton_ofertas {
+    background-color: #35BDA6;
+    color: #10273A;
+}
+.menu .boton_CV:hover, .boton_ofertas:hover {
+    background-color: #66DCC8;
+    color: #10273A;
+}
+.menu a:hover, .columna_footer a:hover {
+    color: #35BDA6;
+}
+.botones_portada a, .boton_oportunidades {
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.cabecera, .footer {
+    background-color: #10273A;
+    display: flex;
+    gap: 20px;
+}
+/**FIN DE ESTILOS COMPARTIDOS*/
+
+/**CABECERA*/
+.cabecera {
+    padding: 15px 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px;
+    display: block;
+}
+
+/*css del menu de la cabecera*/
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.menu .boton_CV {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/**FIN DE LA CABECERA*/
+
+/**PORTADA PRINCIPAL*/
+.portada {
+    background-color: #0f3246;
+    color: white;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.texto_portada, .imagen_portada {
+    flex: 1;
+    min-width: 0;
+}
+
+.portada .subtitulo {
+    color: #35BDA6;
+}
+
+.portada .titulo {
+    color: white;
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.portada .descripcion {
+    color: #D2E2EB;
+}
+
+.botones_portada{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+.boton_formulario {
+    border: 2px solid white;
+    color: white;
+}
+.boton_formulario:hover {
+    background-color: white;
+    color: #10273A;
+}
+.boton_ofertas {
+    border: 2px solid transparent;
+}
+
+.imagen_portada img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+/**FIN DE LA PORTADA*/
+
+/**QUIENES SOMOS*/
+.quienes_somos {
+    background-color: white;
+}
+
+.tarjeta_quienes_somos {
+    border: 1px solid #E0E8EB;
+    border-radius: 10px;
+    padding: 25px; 
+}
+.tarjeta_quienes_somos h3 {
+    margin-top: 0;
+}
+.tarjeta_quienes_somos p {
+    margin-bottom: 0;
+}
+/**FIN DE QUIENES SOMOS*/
+
+/**COMO EMPEZAR*/
+.como_empezar {
+    background-color: #F1F6F7;
+}
+
+/*tarjetas*/
+.tarjeta_como_empezar span {
+    background-color: #35BDA6;
+    color: #10273A;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.tarjeta_como_empezar h3 {
+    margin: 15px 0 10px;
+}
+/**FIN DE COMO EMPEZAR*/
+
+/**DESCUBRIR OPORTUNIDADES*/
+.descubrir_oportunidades {
+    background-color: #E5F5F0;
+}
+.boton_oportunidades {
+    display: inline-block;
+    background-color: #10273A;
+    color: white;
+    margin-top: 30px;
+}
+.boton_oportunidades:hover {
+    background-color: #1D5060;
+}
+/**FIN DE DESCUBRIR OPORTUNIDADES*/
+
+/**FOOTER*/
+.footer {
+    color: white;
+    padding: 40px 8%;
+    flex-wrap: wrap;
+}
+.columna_footer {
+    flex: 1;
+    min-width: 180px;
+}
+.columna_footer h3 {
+    font-size: 17px;
+    margin-top: 0;
+}
+.columna_footer p, .columna_footer a {
+    color: #C4D6E0;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.columna_footer a {
+    display: block;
+    text-decoration: none;
+}
+.copyright_footer {
+    width: 100%;
+    border-top: 1px solid #375063;
+    padding-top: 15px;
+    text-align: center;
+    color: #C4D6E0;
+    font-size: 12px;
+}
+/**FIN DEL FOOTER*/
+
+/*!CSS PARA PANTALLAS PEQUEÑAS*/
+@media (max-width: 850px) {
+    /*TODO PANTALLA PEQUEÑA EN TODA LA PAGINA*/
+
+}
+
+/*CSS del formulario */ 
+/*!Poner nombre de quien lo ha hecho*/
+
+:root {
+    --primary-color: #000000; 
+    --border-color: #cccccc;
+    --font-family: Arial, sans-serif;
+}
+
+.pagina_formulario {
+    font-family: var(--font-family);
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Título Principal */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+}
+
+/* Formulario Principal */
+form {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bloques de sección primarios */
+fieldset {
+    border: 1px solid var(--border-color);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+legend {
+    padding: 0 5px;
+    font-size: 15px;
+}
+
+/* Ocultar o limpiar los saltos de línea antiguos para el diseño alineado */
+fieldset br {
+    display: none; 
+}
+
+/*2. Alineación de Filas y Campos (Estructura de la Imagen)
+Forzar que cada bloque de etiqueta + input actúe como una fila limpia */
+
+fieldset label, 
+fieldset > div, 
+.campo, 
+.idiomas {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+/* Espaciado e igualación de ancho para los textos descriptivos (Labels/Etiquetas) */
+
+fieldset > label[for], 
+fieldset > div > label[for],
+fieldset > div > span,
+.campo > span, 
+.idiomas > span {
+    width: 160px; /* Ancho fijo para que todo quede perfectamente alineado a la izquierda */
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* Inputs de texto, número, fechas y selects */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+select {
+    padding: 4px 6px;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    font-family: var(--font-family);
+    font-size: 13px;
+    width: 250px; /* Tamaño estándar de la imagen */
+}
+
+/* Modificadores de tamaño específicos para imitar la imagen */
+#edad, 
+#experiencia {
+    width: 60px;
+}
+
+#nombre,
+#email {
+    width: 300px;
+}
+
+/*3. Manejo de Opciones (Radios, Checkboxes y Contenedores)
+    Contenedor de bloques de opciones (Habilidades e Idiomas) */
+
+.opciones {
+    display: block; /* Mantiene la fila de inputs y el "Añade otro" debajo */
+    width: 100%;
+}
+
+/* Permitir saltos de línea internos en habilidades/idiomas si es necesario */
+.opciones br {
+    display: block;
+    margin-top: 8px;
+}
+
+/* Estilo para las etiquetas de los inputs selectors (Checkbox/Radio) */
+.opciones label,
+fieldset div label {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    margin-right: 15px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Inputs internos de tipo checkbox y radio */
+.opciones input[type="checkbox"],
+.opciones input[type="radio"],
+fieldset div input[type="radio"] {
+    margin-right: 4px;
+    margin-left: 0;
+}
+
+/* Inputs de "Añade otra habilidad/idioma" */
+.opciones b {
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.opciones input[type="text"] {
+    width: 250px;
+}
+
+/* 4. Consentimiento (Acepto) y Botones de Acción
+  
+Fila del consentimiento de privacidad */
+
+.acepto {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.acepto input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Contenedor de botones */
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Botones de acción */
+.botonEnviar, 
+.botonBorrar {
+    padding: 6px 14px;
+    font-family: var(--font-family);
+    font-size: 13px;
+    border: 1px solid #767676;
+    background-color: #efefef;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.botonEnviar:hover, 
+.botonBorrar:hover {
+    background-color: #e5e5e5;
+}
+
+.botonEnviar:active, 
+.botonBorrar:active {
+    background-color: #cccccc;
+}
+
+/* Clases de utilidad para errores */
+.error {
+    color: #ff0000;
+    font-size: 13px;
+    margin-top: 5px;
+}
