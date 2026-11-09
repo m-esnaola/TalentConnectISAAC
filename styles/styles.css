@@ -1,7 +1,7 @@
 /* ESTILOS GENERALES DE TALENTCONNECT */
 
-/* MAITANE - PAGINA PRINCIPAL */
-/*estilos compartidos*/
+/*! MAITANE - PAGINA PRINCIPAL */
+/**ESTILOS COMPARTIDOS*/
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -21,15 +21,63 @@ body {
     font-size: 16px;
     line-height: 1.7;
 }
-
-/*CABECERA*/
-.cabecera {
-    background-color: #10273A;
-    padding: 15px 5%;
+.quienes_somos, .como_empezar, .descubrir_oportunidades {
+    padding: 70px 8%;
+    text-align: center;
+}
+.quienes_somos .descripcion, .como_empezar .descripcion, .descubrir_oportunidades .descripcion
+{
+    color: #526779;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.tarjetas_quienes_somos, .tarjetas_como_empezar {
     display: flex;
+    margin-top: 40px;
+    gap: 30px;
+}
+.tarjeta_quienes_somos, .tarjeta_como_empezar {
+    flex: 1;
+    min-width: 0;
+}
+.tarjeta_quienes_somos h3, .tarjeta_como_empezar h3 {
+    color: #10273A;
+    font-size: 18px;
+}
+.tarjeta_quienes_somos p, .tarjeta_como_empezar p {
+    color: #526779;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.menu .boton_CV, .boton_ofertas {
+    background-color: #35BDA6;
+    color: #10273A;
+}
+.menu .boton_CV:hover, .boton_ofertas:hover {
+    background-color: #66DCC8;
+    color: #10273A;
+}
+.menu a:hover, .columna_footer a:hover {
+    color: #35BDA6;
+}
+.botones_portada a, .boton_oportunidades {
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.cabecera, .footer {
+    background-color: #10273A;
+    display: flex;
+    gap: 20px;
+}
+/**FIN DE ESTILOS COMPARTIDOS*/
+
+/**CABECERA*/
+.cabecera {
+    padding: 15px 5%;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
 }
 
 .logo img {
@@ -37,38 +85,26 @@ body {
     display: block;
 }
 
+/*css del menu de la cabecera*/
 .menu {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 25px;
 }
-
 .menu a {
     color: white;
     text-decoration: none;
     font-size: 15px;
 }
-
-.menu a:hover {
-    color: #35BDA6;
-}
-
 .menu .boton_CV {
-    background-color: #35BDA6;
-    color: #10273A;
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
 }
+/**FIN DE LA CABECERA*/
 
-.menu .boton_CV:hover {
-    background-color: #66DCC8;
-    color: #10273A;
-}
-/*FIN DE LA CABECERA*/
-
-/*PORTADA PRINCIPAL*/
+/**PORTADA PRINCIPAL*/
 .portada {
     background-color: #0f3246;
     color: white;
@@ -104,21 +140,6 @@ body {
     gap: 15px;
     margin-top: 30px;
 }
-.botones_portada a {
-    text-decoration: none;
-    padding: 14px 22px;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-.boton_ofertas {
-    background-color: #35BDA6;
-    color: #10273A;
-}
-.boton_ofertas:hover {
-    background-color: #66DCC8;
-}
-
 .boton_formulario {
     border: 2px solid white;
     color: white;
@@ -127,72 +148,114 @@ body {
     background-color: white;
     color: #10273A;
 }
+.boton_ofertas {
+    border: 2px solid transparent;
+}
 
 .imagen_portada img {
     width: 100%;
     display: block;
     border-radius: 12px;
 }
-/*FIN DE LA PORTADA*/
+/**FIN DE LA PORTADA*/
 
-/*QUIENES SOMOS*/
+/**QUIENES SOMOS*/
 .quienes_somos {
     background-color: white;
-    padding: 70px 8%;
-    text-align: center;
 }
 
-/*textos y titulos de quienes somos*/
-.quienes_somos .descripcion {
-    color: #526779;
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.tarjetas_quienes_somos {
-    display: flex;
-    gap: 25px;
-    margin-top: 40px;
-}
 .tarjeta_quienes_somos {
-    flex: 1;
-    min-width: 0;
     border: 1px solid #E0E8EB;
     border-radius: 10px;
     padding: 25px; 
 }
 .tarjeta_quienes_somos h3 {
-    color: #10273A;
-    font-size: 18px;
     margin-top: 0;
 }
 .tarjeta_quienes_somos p {
-    color: #526779;
-    font-size: 14px;
-    line-height: 1.6;
     margin-bottom: 0;
 }
-/*FIN DE QUIENES SOMOS*/
+/**FIN DE QUIENES SOMOS*/
+
+/**COMO EMPEZAR*/
+.como_empezar {
+    background-color: #F1F6F7;
+}
+
+/*tarjetas*/
+.tarjeta_como_empezar span {
+    background-color: #35BDA6;
+    color: #10273A;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.tarjeta_como_empezar h3 {
+    margin: 15px 0 10px;
+}
+/**FIN DE COMO EMPEZAR*/
+
+/**DESCUBRIR OPORTUNIDADES*/
+.descubrir_oportunidades {
+    background-color: #E5F5F0;
+}
+.boton_oportunidades {
+    display: inline-block;
+    background-color: #10273A;
+    color: white;
+    margin-top: 30px;
+}
+.boton_oportunidades:hover {
+    background-color: #1D5060;
+}
+/**FIN DE DESCUBRIR OPORTUNIDADES*/
+
+/**FOOTER*/
+.footer {
+    color: white;
+    padding: 40px 8%;
+    flex-wrap: wrap;
+}
+.columna_footer {
+    flex: 1;
+    min-width: 180px;
+}
+.columna_footer h3 {
+    font-size: 17px;
+    margin-top: 0;
+}
+.columna_footer p, .columna_footer a {
+    color: #C4D6E0;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.columna_footer a {
+    display: block;
+    text-decoration: none;
+}
+.copyright_footer {
+    width: 100%;
+    border-top: 1px solid #375063;
+    padding-top: 15px;
+    text-align: center;
+    color: #C4D6E0;
+    font-size: 12px;
+}
+/**FIN DEL FOOTER*/
 
 /*!CSS PARA PANTALLAS PEQUEÑAS*/
 @media (max-width: 850px) {
-    .cabecera {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .logo img {
-        width: 230px;
-    }
-    .menu {
-        justify-content: center;
-        gap: 15px;
-        text-align: center;
-    }
-    /*TODO PANTALLA PEQUEÑA LA PORTADA*/  
-    /*TODO PANTALLA PEQUEÑA DE QUIENES SOMOS*/
+    /*TODO PANTALLA PEQUEÑA EN TODA LA PAGINA*/
+
 }
 
-/*CSS del formulario */
+/*CSS del formulario */ 
+/*!Poner nombre de quien lo ha hecho*/
 
 :root {
     --primary-color: #000000; 
@@ -200,7 +263,7 @@ body {
     --font-family: Arial, sans-serif;
 }
 
-body {
+.pagina_formulario {
     font-family: var(--font-family);
     background-color: #ffffff;
     color: #000000;
