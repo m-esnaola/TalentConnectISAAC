@@ -38,3 +38,12 @@ def fn_buscar_oferta_dict(id_oferta_int,ofertas_int):
             return oferta_dict
     """Eskaintza aurkitzen ez bada bueltatu none"""
     return None
+
+# * Hautagaitza bat bilatu hautagaiaren IDaren bidez
+def fn_buscar_candidatura_dict(id_candidato_int, candidaturas_list):
+    """Hautagaiaren IDaren bidez hautagaitza bilatu eta dict edo None itzuli."""
+    for candidatura_dict in candidaturas_list:
+        if candidatura_dict["id_candidato"] == id_candidato_int:
+            return candidatura_dict
+    # Hautagaitza aurkitzen ez bada, None itzuli
+    return None
