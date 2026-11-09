@@ -90,7 +90,6 @@ def fn_menu_procesos():
 
 
 # * TALENTCONNECT MENU NAGUSIA
-#TODO: funtzioak bukatu
 def fn_menu_principal(usuario_dict):
     """
     Saioa hasi duen erabiltzaileari menu nagusia erakutsi.
@@ -116,8 +115,7 @@ def fn_menu_principal(usuario_dict):
         elif seleccion_str=="2":
             fn_menu_ofertas()
         elif seleccion_str=="3":
-            print
-            #fn_menu_procesos() comentado porque aun no existe
+            fn_menu_procesos()
 
 
 
