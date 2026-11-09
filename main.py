@@ -61,82 +61,27 @@ def fn_menu_principal(usuario_dict):
         usuario_dict (dict): Saioa hasi duen erabiltzailearen datuak.
     """
     while True:
-        print("\nBienvenido/a", usuario_dict["nombre"], "al menú interactivo:")
-        # ? Posibles cosas a añadir: (si nos da tiempo)
-        # - Sacar estadisticas
-        # - Mi cuenta
+        print("Menu principal")
+        print("Bienvenido", usuario_dict["nombre"])
+        print("0. Salir del menu")
+        print("1. Gestion de candidatos")
+        print("2. Consultar ofertas")
+        print("3. Gestion de procesos de seleccion")
 
-        print("0 --> Salir del menú")
-        print("1 --> Gestión de candidatos")    #mostrar todos los candidatos, buscar un 
-                                                #candidato por id y mostrar su info, filtar 
-                                                #candidatos y añadir candidatura
-        print("2 --> Consultar oferta")
-        print("3 --> Gestión de procesos de selección") #cambiar el estado de una candidatura 
-                                                        #(pendiente de revision, pendiente de 
-                                                        # entrevista, aceptado y rechazado)
+        seleccion_str=input("Seleccione una opcion:").strip()
 
-        selecion_int = int(input(""))
-
-        if (selecion_int == 0):
-            print("Adiós, vuelva pronto")
+        if seleccion_str=="0":
             break
-
-        # * GESTIÓN DE CANDIDATOS
-        elif (selecion_int == 1):
-            print("Opción de gestión de candidatos seleccionado")
-
-
-
-
-
-
+        elif seleccion_str=="1":
+            fn_menu_candidatos()
+        elif seleccion_str=="2":
+            print
+            #fn_menu_ofertas() comentado porque aun no existe
+        elif seleccion_str=="3":
+            print
+            #fn_menu_procesos() comentado porque aun no existe
 
 
-            # TODO: Crear un submenú para gestionar candidatos.
-            # - Mostrar todos los candidatos registrados.
-            # - Buscar un candidato por ID y mostrar su información.
-            # - Filtrar candidatos por tecnologías, idiomas y experiencia.
-            # - Añadir candidatos
-            
-            # Las funcionalidades se implementarán en candidatos.py.
-            # Cada opción del submenú llamará a una función diferente.
-
-        # * ESKAINTZEN KONTSULTA
-        elif (selecion_int == 2):
-            print("Opción de consulta de ofertas seleccionado")
-            # Eskaintzen kontsultarako azpimenua.
-            while True:
-                print("0. Volver al menú principal")
-                print("1. Mostrar todas las ofertas")
-                print("2. Mostrar todos los candidatos de una oferta")
-                seleccion_oferta_str = input("Seleccione una opcion:")
-
-                if seleccion_oferta_str == "0":
-                    break
-                elif seleccion_oferta_str == "1":
-                    fn_mostrar_ofertas()
-                elif seleccion_oferta_str == "2":
-                    fn_mostrar_candidtos_de_oferta()
-                else:
-                    print("ERROR. Opción no valida. Porfavor, introduzca una opción valida")
-                    
-                
-
-        # * GESTIÓN DE PROCESOS DE SELECCIÓN
-        elif (selecion_int == 3):
-            print("Opción de gestión de procesos seleccionado")
-            # TODO: Implementar la modificación del estado de candidaturas.
-            # - Identificar la oferta y el candidato.
-            # - Consultar el estado actual de la candidatura.
-            # - Permitir cambiar el estado: pendiente de revisión, pendiente de entrevista,
-            #   aceptado o rechazado.
-
-            # Las funciones se implementarán en procesos_seleccion.py.
-
-        else:
-            print("Opción no válida")
-            
-        input("\nPulsa INTRO para volver al menú...")
 
 # * PROGRAMAREN HASIERA
 if __name__ == "__main__":
