@@ -74,3 +74,32 @@ def fn_buscar_candidatura_dict(id_candidato_int, candidaturas_list):
                     with open("ofertas.json", "w", encoding="utf-8") as archivo:
                         json.dump(ofertas_dict, archivo, indent=4, ensure_ascii=False)
                     print("Estado actualizado correctamente")
+
+def fn_consultar_candidaturas_por_estado():
+    """Egoera bat aukeratu eta egoera hori duten hautagaitza guztiak erakutsi."""
+    ofertas_dict = fn_leer_ofertas_dict()
+    candidatos_dict = fn_leer_candidatos_dict()
+
+    estado_str = fn_elegir_estado_str()
+
+    print("\n========== CANDIDATURAS:", estado_str.upper(), "==========")
+    encontradas_int = 0
+
+    for oferta_dict in ofertas_dict["ofertas"]:
+        for candidatura_dict in oferta_dict["candidaturas"]:
+            if candidatura_dict["estado"] == estado_str:
+                # Hautagaiaren izena bilatu
+                nombre_str = "Desconocido"
+                for candidato_dict in candidatos_dict["candidatos"]:
+                    if candidato_dict["id_candidato"] == candidatura_dict["id_candidato"]:
+                        nombre_str = candidato_dict["nombre"]
+                        break
+
+                print("\nOferta:", oferta_dict["titulo"], "(ID", oferta_dict["id_oferta"], ")")
+                print("Candidato:", nombre_str, "(ID", candidatura_dict["id_candidato"], ")")
+                print("Fecha:", candidatura_dict["fecha"])
+                encontradas_int += 1
+
+    if encontradas_int == 0:
+        print("No hay candidaturas con ese estado")
+
