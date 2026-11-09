@@ -47,3 +47,30 @@ def fn_buscar_candidatura_dict(id_candidato_int, candidaturas_list):
             return candidatura_dict
     # Hautagaitza aurkitzen ez bada, None itzuli
     return None
+
+    # * Hautagaitza baten egoera aldatu
+    def fn_cambiar_estado_candidatura():
+        """Eskaintza eta hautagai bat aukeratu eta haren hautagaitzaren egoera aldatu."""
+        ofertas_dict = fn_leer_ofertas_dict()
+        id_oferta_int=fn_pedir_id_int("Introduce el ID de la oferta:")
+        oferta_dict=fn_buscar_oferta_dict(id_oferta_int,oferta_dict["ofertas"])
+
+        if oferta_dict is None:
+            print("No existe ninguna oferta con ese ID")
+        else:
+            id_candidato_int = fn_pedir_id_int("Introduce el id del candidato: ")
+            candidatura_dict=fn_buscar_candidatura_dict(id_candidato_int,oferta_dict["candidaturas"])
+            if candidatura_dict is None:
+                print("Ese candidato no esta inscrito en esta oferta")
+            else:
+                print("\nEstado actual:", candidatura_dict["estado"])
+                nuevo_estado_str = fn_elegir_estado_str()
+
+                if nuevo_estado_str == candidatura_dict["estado"]:
+                    print("La candidatura ya tiene ese estado")
+                else:
+                    # Egoera aldatu eta JSON fitxategia berridatzi
+                    candidatura_dict["estado"] = nuevo_estado_str
+                    with open("ofertas.json", "w", encoding="utf-8") as archivo:
+                        json.dump(ofertas_dict, archivo, indent=4, ensure_ascii=False)
+                    print("Estado actualizado correctamente")
