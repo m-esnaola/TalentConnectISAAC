@@ -54,12 +54,12 @@
         <div class="campo">
             <span><b>Habilidades: </b></span> <br>
             <div class="opciones">
-                <label><input type="checkbox" name="habilidades" value="HTML"> HTML</label>
-                <label><input type="checkbox" name="habilidades" value="CSS"> CSS</label>
-                <label><input type="checkbox" name="habilidades" value="JavaScript"> JavaScript</label>
-                <label><input type="checkbox" name="habilidades" value="Python"> Python</label>
-                <label><input type="checkbox" name="habilidades" value="SQL"> SQL</label>
-                <label><input type="checkbox" name="habilidades" value="Inglés"> Inglés</label> 
+                <label><input type="checkbox" id= "HTML" name="habilidades" value="HTML"> HTML</label>
+                <label><input type="checkbox" id= "CSS" name="habilidades" value="CSS"> CSS</label>
+                <label><input type="checkbox" id= "JavaScript" name="habilidades" value="JavaScript"> JavaScript</label>
+                <label><input type="checkbox" id= "Python" name="habilidades" value="Python"> Python</label>
+                <label><input type="checkbox" id= "SQL" name="habilidades" value="SQL"> SQL</label>
+                <label><input type="checkbox" id= "Inglés" name="habilidades" value="Inglés"> Inglés</label> 
                 <br>
                 <b>Añade otra habilidad: </b><label><input type="text" name="habilidades" placeholder="Introduce otra habilidad"></label>
           </div>
@@ -68,9 +68,9 @@
         <div class="idiomas">
             <span><b>Idiomas: </b></span>
             <div class="opciones">
-            <label><input type="checkbox" name="idioma" value="Castellano">Castellano</label>
-            <label><input type="checkbox" name="idioma" value="Euskera">Euskera</label>
-            <label><input type="checkbox" name="idioma" value="Inglés">Inglés</label>
+            <label><input type="checkbox" id= "Castellano" name="idioma" value="Castellano">Castellano</label>
+            <label><input type="checkbox" id= "Euskera" name="idioma" value="Euskera">Euskera</label>
+            <label><input type="checkbox" id= "Inglés" name="idioma" value="Inglés">Inglés</label>
             <br>
             <b>Añade otro idioma: </b><label><input type="text" name="idioma" placeholder="Introduce otro idioma">
             </div>
@@ -98,13 +98,33 @@
             var nombre = document.getElementById("nombre").value;
             var edad = document.getElementById("edad").value;
             var email = document.getElementById("email").value;
-            var nacimiento = document.getElementById("nacimiento").value;
-            var experiencia = document.getElementById("experiencia").value;    
+            var nacimiento = document.getElementById("nacimiento").value;   
             var puesto = document.getElementById("puesto").value;
-            var 
+            var experiencia = document.getElementById("experiencia").value;
+            var modalidad = document.getElementById("presencial").value;
+            var modalidad = document.getElementById("remoto").value;
+            var modalidad = document.getElementById("híbrido").value;
+            var habilidad = document.getElementById("HTML").value;
+            var habilidad = document.getElementById("CSS").value;
+            var habilidad = document.getElementById("JavaScript").value;
+            var habilidad = document.getElementById("SQL").value;
+            var habilidad = document.getElementById("Inglés").value;
+            var idioma = document.getElementById("Castellano").value;
+            var idioma = document.getElementById("Euskera").value;
+            var idioma = document.getElementById("Inglés").value;
+            console.log(nombre);
+            console.log(edad);
+
+            if (nombre.leng == 0){
+
+
             }
+        }
 
     </script>
+
+
+
 
 
 
