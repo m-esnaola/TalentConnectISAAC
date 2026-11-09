@@ -14,3 +14,20 @@ def fn_pedir_id_int(mensaje_str):
             print("Introduce un ID valido")
     return id_int
 
+# * Eskaintza bat bilatu IDaren bidez
+def fn_elegir_estado_str():
+    """Egoeren zerrenda erakutsi eta erabiltzaileak aukeratutakoa itzuli."""
+    print("\nEstados disponibles:")
+    for i_int, estado_str in enumerate(estados_list, start=1):
+        print(i_int, "-->", estado_str)
+
+    while True:
+        opcion_str = input("Seleccione un estado: ").strip()
+        if opcion_str.isdigit() and 1 <= int(opcion_str) <= len(estados_list):
+            estado_elegido_str = estados_list[int(opcion_str) - 1]
+            break
+        else:
+            print("ERROR. Opcion no valida.")
+    return estado_elegido_str
+
+    # * Eskaintza bat bilatu IDaren bidez
