@@ -1,0 +1,56 @@
+{
+    "ofertas": [
+        {
+            "id_oferta": 101,
+            "titulo": "Desarrollador Backend",
+            "salario": 28000,
+            "horario": "Jornada completa",
+            "tecnologias_requeridas": [
+                "Python",
+                "Java"
+            ],
+            "idiomas_requeridos": [
+                {
+                    "nombre": "Inglés",
+                    "nivel": "B2"
+                }
+            ],
+            "candidaturas": [
+                {
+                    "id_candidato": 1,
+                    "fecha": "2026-11-05",
+                    "estado": "Pendiente de revisión"
+                }
+            ]
+        },
+        {
+            "id_oferta": 102,
+            "titulo": "Desarrollador Frontend",
+            "salario": 26000,
+            "horario": "Jornada completa",
+            "tecnologias_requeridas": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "idiomas_requeridos": [
+                {
+                    "nombre": "Inglés",
+                    "nivel": "B1"
+                }
+            ],
+            "candidaturas": [
+                {
+                    "id_candidato": 1,
+                    "fecha": "2026-11-05",
+                    "estado": "Pendiente de entrevista"
+                },
+                {
+                    "id_candidato": 2,
+                    "fecha": "2026-11-05",
+                    "estado": "Pendiente de revisión"
+                }
+            ]
+        }
+    ]
+}

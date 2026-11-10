@@ -1,132 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario TalentConnect</title>
-
+    <link rel="stylesheet" href="styles/formulario.css">
 </head>
+
 <body class="pagina_formulario">
-    <h1>TalentConnect</h1>
-    <form action="" method="POST" enctype="multipart/form-data">
+    <div class="contenedor">
+        <h1>TalentConnect</h1>
+        <form id="formTalent" onsubmit="return validarForm(event)" method="POST" enctype="multipart/form-data">
 
-        <fieldset>
-            <legend><b>Datos del candidato</b></legend>
-            <label for="nombre"><b>Nombre:</b></label>
-            <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
-            <br>
-            <label for="edad"><b>Edad:</b></label>
-            <input type="number" id="edad" name="edad"/>
-            <br>
-            <b>Email: </b><input type="email" name="email" id="email">
-            <br>
-            <label for="nacimiento"><b>Fecha de nacimiento:</b></label>
-            <input type="date" id="nacimiento" name="nacimiento">
-            <br>
-        </fieldset>
-        
-        <br>
+            <fieldset>
+                <legend><b>Datos del candidato</b></legend>
 
-        <fieldset>
-            <label for="puesto" id="puesto"><b>Oferta a la que aplica: </b></label>
-            <select name="puesto" id="puesto">
-                <option value="DdAM">Desarrollo De Aplicaciones Moviles</option>
-                <option value="DW">Desarrollo Web</option>
-                <option value="GdBD">Gestion de bases de datos</option>
-            </select>
-     
+                <div class="campo">
+                    <label for="nombre"><b>Nombre:</b></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+                </div>
 
-        <div>
-          <label for="experiencia" id="experiencia"><b>Años de experiencia: </b></label>
-          <input type="number" id="experiencia" min="0" max="40" value="0">
-        </div>
- 
+                <div class="campo">
+                    <label for="edad"><b>Edad:</b></label>
+                    <input type="number" id="edad" name="edad" min="16" max="99">
+                </div>
 
-        <div>
-            <span><b>Modalidad preferida: </b></span>
-            <br>
-                <label><input type="radio" name="modalidad" id="presencial" value="presencial">Presencial</label>
-                <label><input type="radio" name="modalidad" id="remoto" value="remoto">Remoto</label>
-                <label><input type="radio" name="modalidad" id="híbrido" value="híbrido">Híbrido</label>
+                <div class="campo">
+                    <label for="email"><b>Email:</b></label>
+                    <input type="email" name="email" id="email" placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="campo">
+                    <label for="nacimiento"><b>Fecha de nacimiento:</b></label>
+                    <input type="date" id="nacimiento" name="nacimiento">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend><b>Perfil profesional</b></legend>
+
+                <div class="campo">
+                    <label for="puestoSelect"><b>Oferta a la que aplica:</b></label>
+                    <select name="puesto" id="puestoSelect">
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="DdAM">Desarrollo De Aplicaciones Móviles</option>
+                        <option value="DW">Desarrollo Web</option>
+                        <option value="GdBD">Gestión de bases de datos</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="experiencia"><b>Años de experiencia:</b></label>
+                    <input type="number" id="experiencia" name="experiencia" min="0" max="40" value="0">
+                </div>
+
+                <div class="campo">
+                    <span><b>Modalidad preferida:</b></span>
+                    <div class="opciones-inline">
+                        <label><input type="radio" name="modalidad" id="presencial" value="presencial">
+                            Presencial</label>
+                        <label><input type="radio" name="modalidad" id="remoto" value="remoto"> Remoto</label>
+                        <label><input type="radio" name="modalidad" id="hibrido" value="híbrido"> Híbrido</label>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <span><b>Habilidades:</b></span>
+                    <div class="opciones-grid">
+                        <label><input type="checkbox" id="hab-html" name="habilidades" value="HTML"> HTML</label>
+                        <label><input type="checkbox" id="hab-css" name="habilidades" value="CSS"> CSS</label>
+                        <label><input type="checkbox" id="hab-js" name="habilidades" value="JavaScript">
+                            JavaScript</label>
+                        <label><input type="checkbox" id="hab-python" name="habilidades" value="Python"> Python</label>
+                        <label><input type="checkbox" id="hab-sql" name="habilidades" value="SQL"> SQL</label>
+                        <label><input type="checkbox" id="hab-ingles" name="habilidades" value="Inglés"> Inglés</label>
+                    </div>
+                    <div class="otra-opcion">
+                        <label for="otraHabilidad"><b>Añade otra habilidad:</b></label>
+                        <input type="text" id="otraHabilidad" name="otraHabilidad"
+                            placeholder="Introduce otra habilidad">
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <span><b>Idiomas:</b></span>
+                    <div class="opciones-grid">
+                        <label><input type="checkbox" id="idio-castellano" name="idioma" value="Castellano">
+                            Castellano</label>
+                        <label><input type="checkbox" id="idio-euskera" name="idioma" value="Euskera"> Euskera</label>
+                        <label><input type="checkbox" id="idio-ingles" name="idioma" value="Inglés"> Inglés</label>
+                    </div>
+                    <div class="otra-opcion">
+                        <label for="otroIdioma"><b>Añade otro idioma:</b></label>
+                        <input type="text" id="otroIdioma" name="otroIdioma" placeholder="Introduce otro idioma">
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="campo privacidad-box">
+                <label class="acepto">
+                    <input type="checkbox" id="privacidad" name="privacidad">
+                    La persona candidata ha dado su consentimiento para el tratamiento de sus datos.
+                </label>
             </div>
-        </div>
-    
-        <div class="campo">
-            <span><b>Habilidades: </b></span> <br>
-            <div class="opciones">
-                <label><input type="checkbox" id= "HTML" name="habilidades" value="HTML"> HTML</label>
-                <label><input type="checkbox" id= "CSS" name="habilidades" value="CSS"> CSS</label>
-                <label><input type="checkbox" id= "JavaScript" name="habilidades" value="JavaScript"> JavaScript</label>
-                <label><input type="checkbox" id= "Python" name="habilidades" value="Python"> Python</label>
-                <label><input type="checkbox" id= "SQL" name="habilidades" value="SQL"> SQL</label>
-                <label><input type="checkbox" id= "Inglés" name="habilidades" value="Inglés"> Inglés</label> 
-                <br>
-                <b>Añade otra habilidad: </b><label><input type="text" name="habilidades" placeholder="Introduce otra habilidad"></label>
-          </div>
-        </div>
 
-        <div class="idiomas">
-            <span><b>Idiomas: </b></span>
-            <div class="opciones">
-            <label><input type="checkbox" id= "Castellano" name="idioma" value="Castellano">Castellano</label>
-            <label><input type="checkbox" id= "Euskera" name="idioma" value="Euskera">Euskera</label>
-            <label><input type="checkbox" id= "Inglés" name="idioma" value="Inglés">Inglés</label>
-            <br>
-            <b>Añade otro idioma: </b><label><input type="text" name="idioma" placeholder="Introduce otro idioma">
+            <p id="errores" class="error-msg"></p>
+
+            <div class="botones">
+                <button type="submit" class="botonEnviar">Guardar CV</button>
+                <button type="reset" class="botonBorrar">Limpiar</button>
             </div>
-        </div>
-        
-        </fieldset>
+        </form>
+    </div>
 
-        <!-- Poner que este campo sea oblogatorio con "required" -->
-        <br>
-
-        <label class="acepto">
-          <input type="radio" id="privacidad">  
-          La persona candidata ha dado su consentimiento para el tratamiento de sus datos.
-        </label>
-          <p id="errores" class="error"></p>
-
-        <div class="botones">
-          <button type="submit" class="botonEnviar">Guardar CV</button>
-          <button type="reset" class="botonBorrar">Limpiar</button>
-        </div>
-    </form>
-
-    <script>
-        function ValidarForm() {
-            var nombre = document.getElementById("nombre").value;
-            var edad = document.getElementById("edad").value;
-            var email = document.getElementById("email").value;
-            var nacimiento = document.getElementById("nacimiento").value;   
-            var puesto = document.getElementById("puesto").value;
-            var experiencia = document.getElementById("experiencia").value;
-            var modalidad = document.getElementById("presencial").value;
-            var modalidad = document.getElementById("remoto").value;
-            var modalidad = document.getElementById("híbrido").value;
-            var habilidad = document.getElementById("HTML").value;
-            var habilidad = document.getElementById("CSS").value;
-            var habilidad = document.getElementById("JavaScript").value;
-            var habilidad = document.getElementById("SQL").value;
-            var habilidad = document.getElementById("Inglés").value;
-            var idioma = document.getElementById("Castellano").value;
-            var idioma = document.getElementById("Euskera").value;
-            var idioma = document.getElementById("Inglés").value;
-            console.log(nombre);
-            console.log(edad);
-
-            if (nombre.leng == 0){
-
-
-            }
-        }
-
-    </script>
-
-
-
-
-
-
+    <script src="scripts/validar.js"></script>
 </body>
+
 </html>
