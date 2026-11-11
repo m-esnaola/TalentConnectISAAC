@@ -4,6 +4,7 @@ from candidatos import fn_leer_candidatos_dict
 
 estados_list=["Pendiente de revisión","Pendiente de entrevista","Aceptado","Rechazado"]
 
+#* Erabiltzaileari zenbakizko ID baliozko bat eskatu.
 def fn_pedir_id_int(mensaje_str):
     """Erabiltzaileari ID bat eskatu, zenbaki baliozkoa izan arte, eta int bezala itzuli."""
     while True:
@@ -76,6 +77,7 @@ def fn_cambiar_estado_candidatura():
                     json.dump(ofertas_dict, archivo, indent=4, ensure_ascii=False)
                 print("Estado actualizado correctamente")
 
+#* Hautagaitzak egoeraren arabera kontsultatu.
 def fn_consultar_candidaturas_por_estado():
     """Egoera bat aukeratu eta egoera hori duten hautagaitza guztiak erakutsi."""
     ofertas_dict = fn_leer_ofertas_dict()

@@ -1,7 +1,7 @@
 from candidatos import fn_añadir_candidato
 from candidatos import fn_filtrar_candidatos
 from candidatos import fn_mostrar_candidato_por_id
-from candidatos import fn_mostrar_candidatos_dict
+from candidatos import fn_mostrar_candidatos
 from ofertas import fn_mostrar_ofertas, fn_mostrar_candidatos_de_oferta
 from usuario import fn_crear_cuenta_dict, fn_iniciar_sesion_dict
 from procesos_seleccion import fn_cambiar_estado_candidatura, fn_consultar_candidaturas_por_estado
@@ -33,15 +33,16 @@ def fn_menu_acceso():
             print("ERROR. Opción no valida.")
 
 
-
+#* Hautagaiak kudeatzeko menua erakutsi.
 def fn_menu_candidatos():
+    """Hautagaiak kontsultatzeko, iragazteko eta gehitzeko menua erakusten du."""
     while True:
         print("GESTION DE CANDIDATOS\n0. Volver al menu principal\n1. Mostrar todos los candidatos\n2. Buscar candidatos por ID\n3. Filtrar candidatos\n4. Añadir candidato")
         seleccion_candidatos_str=input("Seleccione una opcion:").strip()
         if seleccion_candidatos_str=="0":
             break
         elif seleccion_candidatos_str=="1":
-            fn_mostrar_candidatos_dict()
+            fn_mostrar_candidatos()
         elif seleccion_candidatos_str=="2":
             fn_mostrar_candidato_por_id()
         elif seleccion_candidatos_str=="3":
@@ -52,7 +53,9 @@ def fn_menu_candidatos():
             print("Error , opcion no valida")
 
 
+#* Eskaintzak kontsultatzeko menua erakutsi.
 def fn_menu_ofertas():
+    """Eskaintzak eta haietan izena eman duten hautagaiak kontsultatzeko menua erakusten du."""
     while True:
         print("CONSULTA DE OFERTAS\n0. Volver al menu principal\n1. Mostrar todas las ofertas\n2. Mostrar los candidatos de una oferta")
         seleccion_oferta_str=input("Seleccione una opcion: ").strip()
@@ -66,6 +69,7 @@ def fn_menu_ofertas():
             print("Error , opcion no valida")
 
 
+#* Hautaketa-prozesuak kudeatzeko menua erakutsi.
 def fn_menu_procesos():
     """Hautaketa-prozesuak kudeatzeko azpimenua erakutsi."""
     while True:
