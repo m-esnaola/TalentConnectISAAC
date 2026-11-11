@@ -13,9 +13,9 @@
 | Apartado | Responsable |
 | --- | --- |
 | Pagina Principal (`talentConnect.html`) y su CSS | **Maitane** |
-| Formulario (`formulario.html`) y estilos | **NOMBRE** |
-| Validación con JavaScript (`scripts/validar.js`) | **Nombre** |
-| Gestión de candidatos (`candidatos.py`) | **Claudia, Ibon y Maitane** |
+| Formulario (`formulario.html`) y estilos | **Ares, Claudia e Ibon** |
+| Validación con JavaScript (`scripts/validar.js`) | **Ares, Claudia e Ibon** |
+| Gestión de candidatos (`candidatos.py`) | **Claudia, Ibon, Ares y Maitane** |
 | Consulta de ofertas (`ofertas.py`) | **Maitane** |
 | Procesos de selección (`procesos_seleccion.py`) | **Ares** |
 | Gestion de usuarios (`usuario.py`) | **Maitane** |
