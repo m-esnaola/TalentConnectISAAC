@@ -254,9 +254,10 @@ body {
 
 }
 
-/*CSS del formulario */ 
-/*!Poner nombre de quien lo ha hecho*/
+/*CSS del formulario  que al final no se ha usado (hecho por Claudia e Ibon, pero al final hemos decidido re adaptarlo a 
+otro css en formulario css*/ 
 
+/*
 :root {
     --primary-color: #000000; 
     --border-color: #cccccc;
@@ -271,7 +272,7 @@ body {
     margin: 0;
 }
 
-/* Título Principal */
+Título Principal
 h1 {
     font-size: 28px;
     font-weight: bold;
@@ -279,13 +280,13 @@ h1 {
     font-family: var(--font-family);
 }
 
-/* Formulario Principal */
+/* Formulario Principal
 form {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Bloques de sección primarios */
+/* Bloques de sección primarios
 fieldset {
     border: 1px solid var(--border-color);
     padding: 15px 20px;
@@ -298,13 +299,13 @@ legend {
     font-size: 15px;
 }
 
-/* Ocultar o limpiar los saltos de línea antiguos para el diseño alineado */
+/* Ocultar o limpiar los saltos de línea antiguos para el diseño alineado
 fieldset br {
     display: none; 
 }
 
 /*2. Alineación de Filas y Campos (Estructura de la Imagen)
-Forzar que cada bloque de etiqueta + input actúe como una fila limpia */
+Forzar que cada bloque de etiqueta + input actúe como una fila limpia
 
 fieldset label, 
 fieldset > div, 
@@ -316,19 +317,19 @@ fieldset > div,
     width: 100%;
 }
 
-/* Espaciado e igualación de ancho para los textos descriptivos (Labels/Etiquetas) */
+/* Espaciado e igualación de ancho para los textos descriptivos (Labels/Etiquetas)
 
 fieldset > label[for], 
 fieldset > div > label[for],
 fieldset > div > span,
 .campo > span, 
 .idiomas > span {
-    width: 160px; /* Ancho fijo para que todo quede perfectamente alineado a la izquierda */
+    width: 160px; /* Ancho fijo para que todo quede perfectamente alineado a la izquierda
     display: inline-block;
     flex-shrink: 0;
 }
 
-/* Inputs de texto, número, fechas y selects */
+/* Inputs de texto, número, fechas y selects
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -339,10 +340,10 @@ select {
     border-radius: 2px;
     font-family: var(--font-family);
     font-size: 13px;
-    width: 250px; /* Tamaño estándar de la imagen */
+    width: 250px; /* Tamaño estándar de la imagen
 }
 
-/* Modificadores de tamaño específicos para imitar la imagen */
+/* Modificadores de tamaño específicos para imitar la imagen
 #edad, 
 #experiencia {
     width: 60px;
@@ -354,20 +355,20 @@ select {
 }
 
 /*3. Manejo de Opciones (Radios, Checkboxes y Contenedores)
-    Contenedor de bloques de opciones (Habilidades e Idiomas) */
+    Contenedor de bloques de opciones (Habilidades e Idiomas)
 
 .opciones {
-    display: block; /* Mantiene la fila de inputs y el "Añade otro" debajo */
+    display: block; /* Mantiene la fila de inputs y el "Añade otro" debajo 
     width: 100%;
 }
 
-/* Permitir saltos de línea internos en habilidades/idiomas si es necesario */
+/* Permitir saltos de línea internos en habilidades/idiomas si es necesario 
 .opciones br {
     display: block;
     margin-top: 8px;
 }
 
-/* Estilo para las etiquetas de los inputs selectors (Checkbox/Radio) */
+/* Estilo para las etiquetas de los inputs selectors (Checkbox/Radio)
 .opciones label,
 fieldset div label {
     display: inline-flex;
@@ -379,7 +380,7 @@ fieldset div label {
     cursor: pointer;
 }
 
-/* Inputs internos de tipo checkbox y radio */
+/* Inputs internos de tipo checkbox y radio
 .opciones input[type="checkbox"],
 .opciones input[type="radio"],
 fieldset div input[type="radio"] {
@@ -387,7 +388,7 @@ fieldset div input[type="radio"] {
     margin-left: 0;
 }
 
-/* Inputs de "Añade otra habilidad/idioma" */
+/* Inputs de "Añade otra habilidad/idioma"
 .opciones b {
     font-weight: bold;
     font-size: 14px;
@@ -401,7 +402,7 @@ fieldset div input[type="radio"] {
 
 /* 4. Consentimiento (Acepto) y Botones de Acción
   
-Fila del consentimiento de privacidad */
+Fila del consentimiento de privacidad 
 
 .acepto {
     display: flex;
@@ -415,14 +416,14 @@ Fila del consentimiento de privacidad */
     margin-right: 8px;
 }
 
-/* Contenedor de botones */
+/* Contenedor de botones
 .botones {
     display: flex;
     gap: 10px;
     margin-top: 15px;
 }
 
-/* Botones de acción */
+/* Botones de acción
 .botonEnviar, 
 .botonBorrar {
     padding: 6px 14px;
@@ -444,9 +445,10 @@ Fila del consentimiento de privacidad */
     background-color: #cccccc;
 }
 
-/* Clases de utilidad para errores */
+/* Clases de utilidad para errores 
 .error {
     color: #ff0000;
     font-size: 13px;
     margin-top: 5px;
 }
+*/
